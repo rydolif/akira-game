@@ -33,17 +33,23 @@
         <input type="hidden" id="name_methodic" value="abakus">
         <input type="hidden" id="voice_methodic" value="classic">
         <a class="navbar-brand" tabindex="-1" href="&#10;        &#10;            /games/&#10;       "></a>
-        <button tabindex="-1" class="navbar-toggler navbar-toggler-close" data-toggle="modal" data-target="#modal_change_bead_color">
+<!--         <button tabindex="-1" class="navbar-toggler navbar-toggler-close" data-toggle="modal" data-target="#modal_change_bead_color">
             Цвет
-        </button>
+        </button> -->
+<!-- 
         <button tabindex="-1" class="navbar-toggler show_block" data-block_type="settings" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" style="">
             <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <button type="button" tabindex="-1" class="navbar-toggler btn btn-warning my-2 my-sm-0 menu__btn" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Настройки" data-original-title="" title="">
+            <img src="img/header--item4.png" alt="">
         </button>
+
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item dropdown task-hidden">
-                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Режим </a>
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Режим </a>
                     <div class="dropdown-menu border-info btn-outline-info noclose">
                         <a class="dropdown-item" href="skils.html" onclick="change_mode('abakus')">Aбакуса</a>
                         <a class="dropdown-item" href="forsag.html" onclick="change_mode('abakus')">Числа</a>
@@ -52,7 +58,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown d-none  tablet-hidden mobile-hidden">
+                <li class="nav-item dropdown d-none tablet-hidden mobile-hidden">
                     <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Режим <span class="mode_display"></span> </a>
                     <div class="dropdown-menu border-warning btn-outline-warning noclose">
                         <a class="dropdown-item mode" data-mode_type="default" href="#"> <input type="hidden" value="off"> <span class="activity"><i class="fa fa-check"></i></span> <span class="title">Выкл. все режимы</span> </a>
@@ -82,8 +88,6 @@
                         <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(6)" href="#" data-value="6">6</a>
                         <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(7)" href="#" data-value="7">7</a>
                         <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(8)" href="#" data-value="8">8</a>
-                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(9)" href="#" data-value="9">9</a>
-                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(10)" href="#" data-value="10">10</a>
                     </div>
                 </li>
 
@@ -106,8 +110,6 @@
                         <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 3.5, screen_pk: 'global'})" href="#" data-value="3.5">3.5 сек </a>
                         <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 4, screen_pk: 'global'})" href="#" data-value="4">4 сек </a>
                         <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 5, screen_pk: 'global'})" href="#" data-value="5">5 сек </a>
-                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 7, screen_pk: 'global'})" href="#" data-value="7">7 сек </a>
-                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 10, screen_pk: 'global'})" href="#" data-value="10">10 сек </a>
                     </div>
                 </li>
 
@@ -122,8 +124,6 @@
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 6, screen_pk: 'global'})" href="#">6</a>
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 7, screen_pk: 'global'})" href="#">7</a>
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 8, screen_pk: 'global'})" href="#">8</a>
-                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 9, screen_pk: 'global'})" href="#">9</a>
-                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 10, screen_pk: 'global'})" href="#">10</a>
                     </div>
                 </li>
 
@@ -170,6 +170,26 @@
                             </div>
                         </div>
                     </div>
+                </li>
+
+                <li class="nav-pause nav-item dropdown tablet-hidden mobile-hidden">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Прогресс: </a>
+                    <div class="card-body text-center p-2">
+                            <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control">
+                                <!-- <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default" data-value_type="progress_impulses_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Автоматические изменения в случає правельного решения примеров" data-original-title="Прогресс количества действий">Прогресс: </label> -->
+                                <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
+                                <label class="btn btn-nrm-2 btn-info p-0">
+                                    <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                </label>
+                                <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                            </div>
+                    </div>
+                </li>
+
+                <li class="nav-pause nav-item dropdown">
+                    <button type="button" tabindex="-1" class="btn btn-warning my-2 my-sm-0 menu__btn" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Настройки" data-original-title="" title="">
+                        <img src="img/header--item4.png" alt="">
+                    </button>
                 </li>
 
             </ul>
@@ -391,26 +411,6 @@
                                     </div>
                                 </div>
                             </div>
-<!--                             <div class="col-12 card-body text-center p-0">
-                                <div class="btn-group2">
-                                    <div class="btn-group inc-dec-control">
-                                        <label class="btn btn-nrm btn-danger pr-0 change_value_to_default" data-value_type="interval" data-value="1">Интервал: </label>
-                                        <label class="btn btn-nrm btn-danger input_decrease"> &lt; </label>
-                                        <label class="btn btn-nrm btn-danger p-0">
-                                            <input type="number" name="interval" class="form-control input-nrm text-center border-danger bg-light-danger input_number" value="1" min="0.1" max="10" step="0.1" data-decimal="1">
-                                        </label>
-                                        <label class="btn btn-nrm btn-danger input_increase"> &gt; </label>
-                                    </div>
-                                    <div class="btn-group inc-dec-control">
-                                        <label class="btn btn-nrm btn-danger pr-0 change_value_to_default" data-value_type="progress_interval" data-value="0">Про:</label>
-                                        <label class="btn btn-nrm btn-danger input_decrease"> &lt; </label>
-                                        <label class="btn btn-nrm btn-danger p-0">
-                                            <input type="number" name="progress_interval" class="form-control input-nrm text-center border-danger bg-light-danger input_number" value="0" min="0" max="10" step="1" data-decimal="0">
-                                        </label>
-                                        <label class="btn btn-nrm btn-danger input_increase"> &gt; </label>
-                                    </div>
-                                </div>
-                            </div> -->
                         </form>
                     </div>
                     <div class="col right_hero right_hero_0 settings_hero" style="height: 80vh; "></div>
@@ -503,7 +503,7 @@
                                 <label class="btn btn-nrm-2 btn-success change_value_to_default" data-value_type="digits_nmb" data-value="1">Цифр: </label>
                                 <label class="btn btn-nrm-2 btn-success input_decrease"> &lt; </label>
                                 <label class="btn btn-nrm-2 btn-success p-0">
-                                    <input type="number" name="digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="1" min="1" max="10" step="1" data-decimal="0">
+                                    <input type="number" name="digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="1" min="1" max="8" step="1" data-decimal="0">
                                 </label>
                                 <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
                             </div>
@@ -514,51 +514,19 @@
                                 <label class="btn btn-nrm-2 btn-info change_value_to_default pr-0" data-value_type="impulses_nmb" data-value="1">Импульсов:</label>
                                 <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
                                 <label class="btn btn-nrm-2 btn-info p-0">
-                                    <input type="number" name="impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="1" min="1" max="10" step="1" data-decimal="0">
+                                    <input type="number" name="impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="1" min="1" max="8" step="1" data-decimal="0">
                                 </label>
                                 <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
                             </div>
                             <div class="btn-group inc-dec-control">
-                                <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default" data-value_type="progress_impulses_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При включенном прогрессе, количество действий увеличится на 1, если
-                                    <br>  Было правильно выполнено то количество примеров, указанное в прогрессе действий
-
-                                    <br><br>  Количество действий уменьшится на 1, если
-                                    <br>  Было НЕправильно выполнено то количество примеров, указанное в прогрессе действий
-                                    <br><br> Если включен параллельно прогресс скорости, то увеличение/уменьшение количества действий будет чередоваться с увеличением/уменьшением скорости" data-original-title="Прогресс количества действий">Прогресс: </label>
+                                <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default" data-value_type="progress_impulses_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Автоматические изменения в случає правельного решения примеров" data-original-title="Прогресс количества действий">Прогресс: </label>
                                 <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
                                 <label class="btn btn-nrm-2 btn-info p-0">
-                                    <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                    <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="8" step="1" data-decimal="0">
                                 </label>
                                 <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
                             </div>
                         </div>
-<!--                         <div class="card-body text-center">
-                            <h4 class="neucha">Интервал</h4>
-                            <div class="btn-group-2">
-                                <div class="btn-group inc-dec-control">
-                                    <label class="btn btn-nrm-2 btn-danger change_value_to_default" data-value_type="interval" data-value="1" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Интервал - это время, которое дается на выполнение одной элементарной операции:
-                                        Показ флэш карт" data-original-title="Интервал">Интервал: </label>
-                                    <label class="btn btn-nrm-2 btn-danger input_decrease"> &lt; </label>
-                                    <label class="btn btn-nrm-2 btn-danger p-0">
-                                        <input type="number" name="interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="1" min="0.1" max="10" step="0.1" data-decimal="1">
-                                    </label>
-                                    <label class="btn btn-danger btn-nrm-2 input_increase"> &gt; </label>
-                                </div>
-                                <div class="btn-group inc-dec-control">
-                                    <label class="btn btn-nrm-2 btn-danger pr-0 change_value_to_default" data-value_type="progress_interval" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При включенном прогрессе скорости, скорость увеличится на 0.1, если
-                                        <br>  Было правильно выполнено то количество примеров, указанное в прогрессе скорости
-
-                                        <br><br>  Скорость уменьшится, если
-                                        <br>  Было НЕправильно выполнено то количество примеров, указанное в прогрессе скорости
-                                        <br><br> Если включен параллельно прогресс действий, то увеличение/уменьшение скорости будет чередоваться с увеличением/уменьшением количества действий" data-original-title="Прогресс количества скорости">Про: </label>
-                                    <label class="btn btn-nrm-2 btn-danger input_decrease"> &lt; </label>
-                                    <label class="btn btn-nrm-2 btn-danger p-0">
-                                        <input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="0" min="0" max="5" step="1" data-decimal="0">
-                                    </label>
-                                    <label class="btn btn-nrm-2 btn-danger input_increase"> &gt; </label>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary pull-right" id="modal_settings_confirm">Применить</button>
