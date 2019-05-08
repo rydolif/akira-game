@@ -5,20 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="ментальная арифметика, платформа по ментальной арифметике, тренажеры по ментальной арифметике, портал по ментальной арифметике, домашние задания для ментальной арифметики, абакус, соробан, анзан, crm система, ментальная арифметика скачать, ментальная арифметика обучение, ментальная арифметика франшиза, абакус, Абакус-центр, AMAkids, Smartykids, UCMAS, PAMA, PAMAGLOBAL, abacus, mental arithmetic, online platform mental arithmetic">
-    <meta name="description" content="mindskills.ru - это лучшая онлайн платформа по ментальной арифметике с красочными тренажерами с  настраиваемыми параметрами  для каждого ученика, с удобной и простой CRM системой учета посещений, оплат, с возможностью задавать домашние задания, с детальной статистикой выполнения заданий, а также онлайн баттлы, онлайн олимпиады, рейтинги и многое другое">
+    <meta name="description" content="это лучшая онлайн платформа по ментальной арифметике с красочными тренажерами с  настраиваемыми параметрами  для каждого ученика, с удобной и простой CRM системой учета посещений, оплат, с возможностью задавать домашние задания, с детальной статистикой выполнения заданий, а также онлайн баттлы, онлайн олимпиады, рейтинги и многое другое">
     <meta name="yandex-verification" content="b0b2abeb71178a3b">
     <meta name="google-site-verification" content="Oq6HwhQkLG9zKCfUXwetAn2-EIee9lmoTA6vk2LRT6U">
-    <link rel="shortcut icon" href="/testos/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/testos/static/bootstrap4/bootstrap_sketchy.min.css">
-    <link rel="stylesheet" href="/testos/static/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
-    <script src="/testos/static/AdminLTE/jquery.min.js"></script>
-    <script src="/testos/static/bootstrap4/popper.min.js"></script>
-    <script src="/testos/static/bootstrap4/bootstrap.min.js"></script>
-    <script src="/testos/static/bootstrap4/sketchy_bootstrap.js"></script>
-    <script src="/testos/static/js/bootstrap-slider.js"></script>
-    <script src="/testos/static/js/device.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/bootstrap4/bootstrap_sketchy.min.css">
+    <link rel="stylesheet" href="static/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <script src="static/AdminLTE/jquery.min.js"></script>
+    <script src="static/bootstrap4/popper.min.js"></script>
+    <script src="static/bootstrap4/bootstrap.min.js"></script>
+    <script src="static/bootstrap4/sketchy_bootstrap.js"></script>
+    <script src="static/js/bootstrap-slider.js"></script>
+    <script src="static/js/device.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Neucha&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/testos/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Флэш карты</title>
 </head>
 
@@ -33,13 +33,7 @@
         <input type="hidden" id="name_methodic" value="abakus">
         <input type="hidden" id="voice_methodic" value="classic">
         <a class="navbar-brand" tabindex="-1" href="&#10;        &#10;            /games/&#10;       "></a>
-<!--         <button tabindex="-1" class="navbar-toggler navbar-toggler-close" data-toggle="modal" data-target="#modal_change_bead_color">
-            Цвет
-        </button> -->
-<!-- 
-        <button tabindex="-1" class="navbar-toggler show_block" data-block_type="settings" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" style="">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
+
 
         <button type="button" tabindex="-1" class="navbar-toggler btn btn-warning my-2 my-sm-0 menu__btn" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Настройки" data-original-title="" title="">
             <img src="img/header--item4.png" alt="">
@@ -49,31 +43,10 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item dropdown task-hidden">
-                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Режим </a>
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="anzan_nmb_display">Тип тренировки</span> </a>
                     <div class="dropdown-menu border-info btn-outline-info noclose">
-                        <a class="dropdown-item" href="skils.html" onclick="change_mode('abakus')">Aбакуса</a>
-                        <a class="dropdown-item" href="forsag.html" onclick="change_mode('abakus')">Числа</a>
-                        <!-- <a class="dropdown-item" href="#" onclick="change_mode('abakus')">Режим абакуса</a>
-                        <a class="dropdown-item" href="#" onclick="change_mode('flash_card')">Режим флэш-карт</a> -->
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown d-none tablet-hidden mobile-hidden">
-                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Режим <span class="mode_display"></span> </a>
-                    <div class="dropdown-menu border-warning btn-outline-warning noclose">
-                        <a class="dropdown-item mode" data-mode_type="default" href="#"> <input type="hidden" value="off"> <span class="activity"><i class="fa fa-check"></i></span> <span class="title">Выкл. все режимы</span> </a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="negative" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">Отрицательные числа</span></a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="disorder" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">Разброс</span></a>
-                        <a class="dropdown-item mode" data-mode_type="2_screens" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">2 Экрана</span></a>
-                        <a class="dropdown-item mode" data-mode_type="3_screens" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">3 Экрана</span></a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="decimal_1" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">Дробные числа (1 знак )</span></a>
-                        <a class="dropdown-item mode" data-mode_type="decimal_2" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">Дробных числа (2 знака )</span></a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="mode_50" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">Переход через 50</span></a>
-                        <a class="dropdown-item mode" data-mode_type="mode_100" href="#"><input type="hidden" value="off"><span class="activity"></span> <span class="title">Переход через 100</span></a>
+                        <a class="dropdown-item" href="#" onclick="change_mode('abakus')">Aбакус</a>
+                        <a class="dropdown-item" href="#" onclick="change_mode('flash_card')">Числа</a>
                     </div>
                 </li>
 
@@ -138,23 +111,9 @@
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 6, screen_pk: 'global'})" href="#">6</a>
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 7, screen_pk: 'global'})" href="#">7</a>
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 8, screen_pk: 'global'})" href="#">8</a>
-                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 9, screen_pk: 'global'})" href="#">9</a>
-                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 10, screen_pk: 'global'})" href="#">10</a>
                     </div>
                 </li>
 
-                <li class="nav-pause nav-item dropdown tablet-hidden mobile-hidden">
-                    <div class="btn-group inc-dec-control">
-                        <label class="btn btn-nrm btn-danger pr-0 change_value_to_default dropdown-toggle" data-value_type="interval" data-value="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Паузы: </label>
-                        <div class="dropdown-menu border-info text-center btn-outline-info">
-                            <label class="btn btn-nrm btn-danger input_decrease btn--arrow">  < </label>
-                            <label class="btn btn-nrm btn-danger p-0">
-                            <input type="number" name="interval" class="form-control input-nrm text-center border-danger bg-light-danger input_number" value="1"  min="0.1" max="10" step="0.1" data-decimal="1">
-                            </label>
-                            <label class="btn btn-nrm btn-danger input_increase btn--arrow"> > </label>
-                        </div>
-                    </div>
-                </li>
 
                 <li class="nav-pause nav-item dropdown tablet-hidden mobile-hidden">
                     <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Знаки: </a>
@@ -162,39 +121,75 @@
                         <div class="dropdown-menu border-info text-center btn-outline-info">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-outline-secondary active">
-                            <input type="radio" name="sign" autocomplete="off" checked="" value="positive"> Положительные
+                            <input type="radio" name="sign" autocomplete="off" checked="" value="positive"> +
                             </label>
                             <label class="btn btn-outline-secondary">
-                            <input type="radio" name="sign"  autocomplete="off" value="negative"> Отрицательные
+                            <input type="radio" name="sign"  autocomplete="off" value="negative"> -
                             </label>
                             </div>
                         </div>
                     </div>
                 </li>
 
+				
+				
                 <li class="nav-pause nav-item dropdown tablet-hidden mobile-hidden">
-                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Прогресс: </a>
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Автомат: </a>
                     <div class="card-body text-center p-2">
-                            <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control">
-                                <!-- <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default" data-value_type="progress_impulses_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Автоматические изменения в случає правельного решения примеров" data-original-title="Прогресс количества действий">Прогресс: </label> -->
-                                <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
-                                <label class="btn btn-nrm-2 btn-info p-0">
-                                    <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
-                                </label>
-                                <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                            <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control noclose">
+								<div class="dropdown-items">Автоматические изменения<br /> в случае правильного решения примера</div>
+								
+								<div class="auto_left">
+									<div class="dropleft">Паузы</div>	
+									<div class="auto_right">
+<div class="btn-group inc-dec-control">
+                                    
+                                    <label class="btn btn-nrm-2 btn-info input_decrease">  &lt; </label>
+                                    <label class="btn btn-nrm-2 btn-info p-0">
+                                        <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                    </label>
+                                    <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                                </div>
+									</div>
+								</div>
+								
+								<div class="auto_left">
+									<div class="dropleft">Спиц</div>								
+									<div class="auto_right">
+										<div class="btn-group inc-dec-control">                                   
+											<label class="btn btn-nrm-2 btn-success input_decrease">  &lt; </label>
+											<label class="btn btn-nrm-2 btn-success p-0">
+												<input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+											</label>
+											<label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+										</div>
+									</div>
+								</div>
+								<div class="auto_left">
+									<div class="dropleft">Примеров</div>								
+									<div class="auto_right">
+										<div class="btn-group inc-dec-control">                                   
+											<label class="btn btn-nrm-2 btn-success input_decrease">  &lt; </label>
+											<label class="btn btn-nrm-2 btn-success p-0">
+												<input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+											</label>
+											<label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+										</div>
+									</div>
+								</div>
+															
+								<div class="modal-footer">
+                        <button type="button" class="btn btn-primary pull-right" id="modal_settings_confirm">Применить</button>
+                    </div>
+								
+								
                             </div>
                     </div>
                 </li>
 
-                <li class="nav-pause nav-item dropdown">
-                    <button type="button" tabindex="-1" class="btn btn-warning my-2 my-sm-0 menu__btn" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Настройки" data-original-title="" title="">
-                        <img src="img/header--item4.png" alt="">
-                    </button>
-                </li>
 
             </ul>
 
-            <a href="mailto:budni-verstalshika@akira.education" class="header__mail">budni-verstalshika@akira.education</a>
 
         </div>
     </nav>
@@ -222,30 +217,7 @@
     <div id="main_screen" class="row col-12 justify-content-center m-0 p-0 bg_0" data-type="class">
         <div class="row screen_row col-12 justify-content-center p-0 m-0" data-row_position="up" data-row_screens_nmb="1">
             <div class="screen bg_color_1 m-0 p-0  align-items-center container-fluid text-center  col-12" id="1" style="border: 1px dotted grey; height:90vh;">
-                <div class="block block--close" data-type="mini-control">
-                    <div class="btn-group mini-control h-lg">
-                        <div class="btn-group inc-dec-control">
-                            <label class="btn btn-nrm-lg btn-lg btn-success input_decrease mb-0"> &lt; </label>
-                            <label class="btn btn-nrm-lg btn-lg btn-success p-0 input-group mb-0 bg-light-success">
-                                <input tabindex="-1" type="number" name="digits_nmb" class="form-control input-nrm text-center no-border bg-light-success p-0 input_number" value="4" min="1" max="10" step="1" data-decimal="0">
-                                <span class="bg-light-success pr-2 d-flex align-items-center"> ц </span>
-                            </label>
-                            <label class="btn btn-nrm-lg btn-lg btn-success mb-0 input_increase"> &gt; </label>
-                        </div>
-                        <a tabindex="-1" class="btn btn-nrm-lg input-nrm btn-lg btn-warning player_name_title d-flex align-items-center">
-                            <span class="player_name_points6">
-                                <input tabindex="-1" class="screen_title m-1 text-center" style="max-width: 70px; border: none; background: inherit;" value="Игрок 1">
-                                (<span class="player_points">0</span>)</span>
-                        </a>
-                        <div class="btn-group inc-dec-control">
-                            <label class="btn btn-nrm-lg btn-lg btn-danger mb-0 input_decrease"> &lt; </label>
-                            <label class="btn btn-nrm-lg btn-lg btn-danger p-0 mb-0 input-group bg-light-danger">
-                                <input tabindex="-1" type="number" name="interval" class="form-control input-nrm text-center p-0 no-border bg-light-danger input_number" value="1" min="0.1" max="5" step="0.1" data-decimal="1">
-                                <span class="bg-light-danger pr-2  d-flex align-items-center"> c </span> </label>
-                            <label class="btn btn-nrm-lg btn-lg mb-0 btn-danger input_increase"> &gt; </label>
-                        </div>
-                    </div>
-                </div>
+ 
                 <div class="block card-body col-12 row m-0 p-0 justify-content-center align-items-center" data-type="problem">
                     <div class="col d-none d-lg-block left_hero left_hero_0  mr-5" style="height: 80vh; "></div>
                     <div class="col p-0 m-0 block" data-type="problem_inner">
@@ -284,47 +256,9 @@
                                 <div class="bead bead-line bead-line-default" style="width: 1.720533728687917vw; height: 0.17205337286879172vw "></div>
                             </div>
                         </div>
-                        <div class="block col-12 row justify-content-center  p-0 m-0 d-none" data-type="answer_inputs"></div>
-                        <div class="block col-12 row justify-content-center  p-0 m-0" data-type="answer_input">
-                            <div class="progress timer_block invisible" style="width: 80%; height: 7px; padding: 0; border: none">
-                                <div class="timer_bar progress-bar progress-bar-striped bg-danger progress-bar-animated color-black" style="width: 100%; ">
-                                    <span style="position: absolute; left: 30%; font-weight: 100;"></span>
-                                </div>
-                            </div>
-                            <div class="input-group mb-3 mt-5" style="width:30vw">
-                                <div class="input-group-prepend">
-                                    <span class="btn btn-success pr-3 pl-3 show_block" data-block_type="settings" style="font-size:5vh"><i class="fa fa-bars"></i></span>
-                                </div>
-                                <input type="number" inputmode="numeric" name="answer_input" data-number="1" class="form-control answer_input text-center" placeholder="Ответ" style="font-size:5vh">
-                                <div class="input-group-append">
-                                    <span class="btn btn-primary btn_start pr-3 pl-3" style="font-size:5vh"><i class="fa fa-play"></i></span>
-                                </div>
-                            </div>
-                        </div>
+                  
                         <div class="block col-12 row justify-content-center  p-0 m-0">
-            <form class="form-inline my-2 my-lg-0">
-                <button type="button" tabindex="-1" class="btn my-2 my-sm-0" id="btn_global_refresh" onclick="global_refresh()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Обнулить/заново" data-original-title="" title="">
-                    <img src="img/header--item1.png" alt="">
-                </button>
-                <div class="main_btn_group form-inline">
-                    <button type="button" tabindex="-1" class="btn btn-secondary my-2 my-sm-0 d-none" id="btn_global_restart" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Заново" data-original-title="" title=""><i class="fa fa-refresh"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-purple my-2 my-sm-0  d-none" id="btn_global_show_example" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Показать примеры" data-original-title="" title=""><i class="fa fa-eye"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-success my-2 my-sm-0  d-none" id="btn_global_show_result" onclick="$('#modal_result').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Результаты" data-original-title="" title=""><i class="fa fa-thumbs-up"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-info my-2 my-sm-0  d-none" id="btn_global_check_answer" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Проверить" data-original-title="" title=""><i class="fa fa-question"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-warning my-2 my-sm-0  d-none" id="btn_global_pause" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Пауза" data-original-title="" title=""><i class="fa fa-pause"></i></button>
-                    <button type="button" tabindex="-1" class="btn my-2 my-sm-0" id="btn_global_start" onclick="global_start()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Старт" data-original-title="" title="">
-                        <img src="img/header--item2.png" alt="">
-                    </button>
-                    <button type="button" tabindex="-1" class="btn btn-success my-2 my-sm-0  d-none" id="btn_global_next" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Следующий" data-original-title="" title=""><i class="fa fa-forward"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-success my-2 my-sm-0  d-none" id="btn_global_continue" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Продолжить" data-original-title="" title=""><i class="fa fa-play"></i></button>
-                </div>
-                <button type="button" id="btn_global_stop" tabindex="-1" onclick="global_stop()" class="btn my-2 my-sm-0" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Стоп" data-original-title="" title=""><i class="fa fa-stop"></i></button>
-                <div class="btn-group" role="group">
-                    <button type="button" tabindex="-1" class="btn btn-warning my-2 my-sm-0" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Настройки" data-original-title="" title="">
-                        <img src="img/header--item4.png" alt="">
-                    </button>
-                </div>
-            </form>
+ 
             </div>
                     </div>
                     <div class="col d-none d-lg-block right_hero right_hero_0 ml-5 " style="height: 80vh; "></div>
@@ -394,7 +328,7 @@
                             <div class="col-12 card-body text-center p-0 ">
                                 <div class="btn-group2">
                                     <div class="btn-group inc-dec-control">
-                                        <label class="btn btn-nrm btn-info pr-0 change_value_to_default" data-value_type="impulses_nmb" data-value="1">Импульсов: </label>
+                                        <label class="btn btn-nrm btn-info pr-0 change_value_to_default" data-value_type="impulses_nmb" data-value="1">Примеров: </label>
                                         <label class="btn btn-nrm btn-info input_decrease"> &lt; </label>
                                         <label class="btn btn-nrm btn-info p-0">
                                             <input type="number" name="impulses_nmb" class="form-control input-nrm text-center border-info bg-light-info input_number" value="1" min="1" max="10" step="1" data-decimal="0">
@@ -438,13 +372,14 @@
             <div class="modal-content border-primary " style="background-color: rgba(255,255,255, 1); z-index: 100">
                 <div class="modal-header border-info ">
                     <h3 class="modal-title neucha"> <img src="img/option.png" alt="">Настройки</h3>
-                    <button type="button" class="btn btn-nrm-2 btn-danger" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="btn btn-nrm-2 btn-danger btn--close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <form action="" id="form_settings_global">
                     <input type="hidden" class="examples_nmb-input" name="examples_nmb" value="0">
                     <div class="modal-body">
+
                         <div class="row homework   d-none ">
                             <div class="col-md-6">
                                 <div class="card-body text-center">
@@ -509,9 +444,9 @@
                             </div>
                         </div>
                         <div class="card-body text-center">
-                            <h4 class="neucha">Количество импульсов</h4>
+                            <h4 class="neucha">Количество Примеров</h4>
                             <div class="btn-group inc-dec-control">
-                                <label class="btn btn-nrm-2 btn-info change_value_to_default pr-0" data-value_type="impulses_nmb" data-value="1">Импульсов:</label>
+                                <label class="btn btn-nrm-2 btn-info change_value_to_default pr-0" data-value_type="impulses_nmb" data-value="1">Примеров:</label>
                                 <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
                                 <label class="btn btn-nrm-2 btn-info p-0">
                                     <input type="number" name="impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="1" min="1" max="8" step="1" data-decimal="0">
@@ -519,7 +454,7 @@
                                 <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
                             </div>
                             <div class="btn-group inc-dec-control">
-                                <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default" data-value_type="progress_impulses_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Автоматические изменения в случає правельного решения примеров" data-original-title="Прогресс количества действий">Прогресс: </label>
+                                <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default btn--label" data-value_type="progress_impulses_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-text="Автоматические изменения в случає правильного решения примеров">Прогресс: </label>
                                 <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
                                 <label class="btn btn-nrm-2 btn-info p-0">
                                     <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="8" step="1" data-decimal="0">
@@ -527,6 +462,26 @@
                                 <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
                             </div>
                         </div>
+                        <div class="card-body text-center">
+                                <h4 class="neucha">Интервал</h4>
+                                <div class="btn-group-2">
+                                    <div class="btn-group inc-dec-control">
+                                        <label class="btn btn-nrm-2 btn-danger change_value_to_default btn--label" data-value_type="interval" data-value="1" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-text="Интервал - это время, которое дается на выполнение одной элементарной операции">Интервал: </label>
+                                        <label class="btn btn-nrm-2 btn-danger input_decrease">  &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-danger p-0">
+                                            <input type="number" name="interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="1" min="0.1" max="10" step="0.1" data-decimal="1">
+                                        </label>
+                                        <label class="btn btn-danger btn-nrm-2 input_increase"> &gt; </label>
+                                    </div>
+                                    <div class="btn-group inc-dec-control">
+                                        <label class="btn btn-nrm-2 btn-danger pr-0 change_value_to_default btn--label" data-value_type="progress_interval" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-text="text">Про: </label>
+                                        <label class="btn btn-nrm-2 btn-danger input_decrease">  &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-danger p-0">
+                                            <input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="0" min="0" max="5" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-danger input_increase"> &gt; </label>
+                                    </div>
+                                </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary pull-right" id="modal_settings_confirm">Применить</button>
@@ -583,7 +538,7 @@
                         <h4 class="neucha text-success d-none plus_bonus_points_block"> Бонусные баллы за 100% правильность: <span class="plus_bonus_points"></span> баллов</h4>
                         <h4 class="neucha text-danger d-none minus_bonus_points_block"> Штрафные баллы за выполнение не в срок: <span class="minus_bonus_points"></span> баллов</h4>
                         <h4 class="neucha"> Итого за данное задание: <span class="summary_points"></span> баллов</h4>
-                        <h4 class="neucha"> Итого выполнено: <span class="done_nmb"></span> примеров</h4>
+                        <h4 class="neucha"> Итого выполнено: <span class="done_nmb"></span> Примеров</h4>
                         <br>
                         <h4 class="neucha d-none"> За этот месяц ты на набрал: <span class="month_points"></span> баллов</h4>
                         <h4 class="neucha d-none"> Всего баллов за данный курс: <span class="cs_points"></span> баллов</h4>
@@ -703,11 +658,11 @@
     <input type="hidden" id="trans_countdown_3" value="Марш!">
     <input type="hidden" id="trans_false_answer" value="Ой-ой! Ошибочка - бывает. Попробуй еще">
     <input type="hidden" id="is_ready" value="0">
-    <input type="hidden" id="url_incorrect" value="/testos/static/games_audio/kungdu_panda_2/incrorrect">
-    <input type="hidden" id="url_correct" value="/testos/static/games_audio/kungdu_panda_2/correct">
-    <input type="hidden" id="url_present" value="/testos/static/audio/audio_for_menar_games/present">
-    <input type="hidden" id="url_sounds" value="/testos/static/audio/audio_for_menar_games/sounds">
-    <input type="hidden" id="url_voice" value="/testos/static/games_audio/voice/russian/female">
+    <input type="hidden" id="url_incorrect" value="static/games_audio/kungdu_panda_2/incrorrect">
+    <input type="hidden" id="url_correct" value="static/games_audio/kungdu_panda_2/correct">
+    <input type="hidden" id="url_present" value="static/audio/audio_for_menar_games/present">
+    <input type="hidden" id="url_sounds" value="static/audio/audio_for_menar_games/sounds">
+    <input type="hidden" id="url_voice" value="static/games_audio/voice/russian/female">
     <script>
     /**
      * Created by User on 07.09.2017.
@@ -1304,7 +1259,7 @@
         return get_parameters_parsed(parameters)
     }
     </script>
-    <script src="/testos/static/js/device.min.js"></script>
+    <script src="static/js/device.min.js"></script>
     <script>
     var current_audio = new Audio();
     var current_audio2 = new Audio();
@@ -2032,7 +1987,7 @@
     function change_bg() {
         random_number = random_between(1, 80);
         var image_fon = "bg_" + random_number + ".jpg";
-        image_url = '/testos/static/img/backgrounds/' + image_fon;
+        image_url = 'static/img/backgrounds/' + image_fon;
         $('#main_screen').css('background-image', 'url(' + image_url + ')');
     }
 
@@ -2340,7 +2295,7 @@
 
     function global_refresh() {
 
-        if (confirm("Вы уверены? Обнуляться все баллы и вы начнете с самого начала")) {
+        if (confirm("Вы уверены, что хотите начать сначала?")) {
             if (is_task_mode()) {
                 $.ajax({
                     type: "get",
@@ -3032,10 +2987,10 @@
         <div class="card-body text-center p-2">\
             <div class="btn-group btn-group-toggle" data-toggle="buttons">\
             <label class="btn btn-outline-secondary active">\
-            <input type="radio" name="sign" autocomplete="off" checked="" value="positive"> Положительные\
+            <input type="radio" name="sign" autocomplete="off" checked="" value="positive"> +\
             </label>\
             <label class="btn btn-outline-secondary">\
-            <input type="radio" name="sign"  autocomplete="off" value="negative"> Отрицательные\
+            <input type="radio" name="sign"  autocomplete="off" value="negative"> -\
             </label>\
             </div>\
         </div>\
@@ -3062,7 +3017,7 @@
         <div class="col-12 card-body text-center p-0 ">\
         <div class="btn-group2">\
         <div class="btn-group inc-dec-control">\
-        <label class="btn btn-nrm btn-info pr-0 change_value_to_default" data-value_type="impulses_nmb" data-value="1">Импульсов: </label>\
+        <label class="btn btn-nrm btn-info pr-0 change_value_to_default" data-value_type="impulses_nmb" data-value="1">Примеров: </label>\
         <label class="btn btn-nrm btn-info input_decrease">  < </label>\
         <label class="btn btn-nrm btn-info p-0">\
         <input type="number" name="impulses_nmb" class="form-control input-nrm text-center border-info bg-light-info input_number" value="1" min="1" max="10" step="1"  data-decimal="0">\
@@ -4428,23 +4383,6 @@
         show_number_abakused(args);
     });
 
-
-    window.onload = function(ev) {
-        if (!is_task_mode()) {
-            $('#modal_global_settings').modal();
-        }
-        $.ajax({
-            type: "get",
-            traditional: true,
-            url: $("#is_auth_check").val(),
-            success: function(data) {
-                if (data.res === true) {
-                    $("#main_screen").removeClass("d-none");
-                    $("#navbar").removeClass("d-none");
-                }
-            }
-        });
-    };
     </script>
 </body>
 

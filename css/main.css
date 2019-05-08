@@ -196,32 +196,32 @@ input::-webkit-inner-spin-button {
 
 
 .bead-active-classic {
-    background: url(/testos/static/custom/pictures/bead-active.png) center top / 100% 100% no-repeat;
+    background: url(../static/custom/pictures/bead-active.png) center top / 100% 100% no-repeat;
 }
 
 .bead-active-blue {
-    background: url(/testos/static/img_game/abakus/bead-active-blue.png) center top / 100% 100% no-repeat;
+    background: url(../static/img_game/abakus/bead-active-blue.png) center top / 100% 100% no-repeat;
 }
 
 .bead-active-orange {
-    background: url(/testos/static/img_game/abakus/bead-active-orange.png) center top / 100% 100% no-repeat;
+    background: url(../static/img_game/abakus/bead-active-orange.png) center top / 100% 100% no-repeat;
 }
 .bead-active-nefrit {
-    background: url(/testos/static/img_game/abakus/bead-active-nefrit.png) center top / 100% 100% no-repeat;
+    background: url(../static/img_game/abakus/bead-active-nefrit.png) center top / 100% 100% no-repeat;
 }
 
 .bead-active-brown {
-    background: url(/testos/static/img_game/abakus/bead-active-brown.png) center top / 100% 100% no-repeat;
+    background: url(../static/img_game/abakus/bead-active-brown.png) center top / 100% 100% no-repeat;
 }
 
 
 .bead-inactive-classic {
-    background: url(/testos/static/custom/pictures/bead-inactive.png) center top / 100% 100% no-repeat;
+    background: url(../static/custom/pictures/bead-inactive.png) center top / 100% 100% no-repeat;
 }
 
 
 .bead-empty-classic {
-    background: url(/testos/static/custom/pictures/bead-empty.png) center top / contain no-repeat;
+    background: url(../static/custom/pictures/bead-empty.png) center top / contain no-repeat;
 }
 
 
@@ -233,7 +233,7 @@ input::-webkit-inner-spin-button {
 
 
 .bead-spoke {
-    background: url(/testos/static/img_game/abakus/bead-empty.png) center top / contain no-repeat;
+    background: url(../static/img_game/abakus/bead-empty.png) center top / contain no-repeat;
 }
 
 .number-display {
@@ -243,6 +243,9 @@ input::-webkit-inner-spin-button {
     padding-top: 0;
 }
 
+.input_decrease .input_increase{
+	color: #41becd !important;
+}
 
 
 .custom-input {
@@ -256,7 +259,7 @@ input::-webkit-inner-spin-button {
     left: 4vw;
 }
 .bg_0 {
-    background:url(/testos/img/bg.png) center center no-repeat;
+    background:url(../img/bg.png) center center no-repeat;
     background-size: cover;
     padding-top: 5%;
 }
@@ -322,7 +325,7 @@ input::-webkit-inner-spin-button {
 .navbar-brand {
     width: 140px;
     height: 50px;
-    background:url(/testos/img/logo.png) center center no-repeat;
+    background:url(../img/logo.png) center center no-repeat;
     background-size: contain
 }
 
@@ -366,6 +369,38 @@ input::-webkit-inner-spin-button {
     color: #4cddee;
     transition: all .6s;
 }
+.dropdown-items {
+    color: #4cddee;
+    transition: all .6s;
+}
+.dropdown-items {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropleft{
+	float: left;
+	color: #000;
+	padding: 10px 40px;
+}
+
+.auto_left{
+    float: left;
+    width: 100%;
+}
+
+.auto_right{
+	 float: right;
+}
+
+
 .dropdown-item:hover,
 .dropdown-item:focus {
     background-color: #9247c3
@@ -396,14 +431,14 @@ input::-webkit-inner-spin-button {
 
 /*----------------------------------------------------*/
 .left_hero_0 {
-    background:url(/testos/img/left.png);
+    background:url(../img/left.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: contain
 }
 
 .right_hero_0 {
-    background:url(/testos/img/right.png);
+    background:url(../img/right.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: contain
@@ -412,20 +447,22 @@ input::-webkit-inner-spin-button {
 
 /*----------------------------------------------------*/
 .bead-active-red {
-    background: url(/testos/img/accent.png) center top / 100% 100% no-repeat;
+    background: url(../img/accent.png) center top / 100% 100% no-repeat;
+    cursor: pointer;
 }
 
 .bead-inactive-default {
-    background: url(/testos/img/base.png) center top / 100% 100% no-repeat;
+    background: url(../img/base.png) center top / 100% 100% no-repeat;
+    cursor: pointer;
 }
 
 .bead-line-default {
-    background: url(/testos/img/block.png) center top /  100% no-repeat;
+    background: url(../img/block.png) center top /  100% no-repeat;
     padding-top: 0.7%;
 }
 
 .bead-empty-default {
-    background: url(/testos/img/block-center.png) center top / contain no-repeat;
+    background: url(../img/block-center.png) center top / contain no-repeat;
 }
 
 /*--------------------------------------------------------*/
@@ -486,10 +523,9 @@ input::-webkit-inner-spin-button {
 
 .show .btn {
     border-radius: 5px !important;
-    border: 2px solid #41becd !important;
+    border: 3px solid #41becd !important;
     background: #41becd !important;
     color: #fff !important;
-    margin-right: 3px !important;
     transition: all .6s;
 }
 
@@ -539,7 +575,7 @@ input::-webkit-inner-spin-button {
 .inc-dec-control .btn {
     background: #fff !important;
     border: none !important;
-    color: #41becd !important;
+    color: #f7f7f7 !important;
 }
 
 .bg-light-success,
@@ -602,7 +638,14 @@ input::-webkit-inner-spin-button {
 }
 
 
-.bg_color_1 {
+.bg_color_1,
+.bg_color_2,
+.bg_color_3,
+.bg_color_4,
+.bg_color_5,
+.bg_color_6,
+.bg_color_7,
+.bg_color_8, {
     height: 100% !important;
     padding-top: 3% !important;
 }
@@ -628,6 +671,7 @@ input::-webkit-inner-spin-button {
     color: #fff;
 }
 
+
 /*-------------------------------------------------------------------------------*/
 
 .bg_color {
@@ -637,7 +681,7 @@ input::-webkit-inner-spin-button {
 }
 
 .border-warning {
-    background-image: url(/testos/img/bg.png) !important;
+    background-image: url(../img/bg.png) !important;
     border: none !important;
 }
 
@@ -763,6 +807,89 @@ input::-webkit-inner-spin-button {
 .menu__btn{
     background-color: transparent !important;
     height: 42px !important;
+}
+
+
+.modal-body {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+.btn--label {
+    display: block;
+}
+.btn--label:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 15px;
+    color: #000;
+    background: #fff;
+    z-index: 1;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0, .3);
+    box-shadow: 0 0 10px 0 rgba(0,0,0, .3);
+    border-radius: 5px;
+    opacity: 0;
+    transition: all .6s;
+    white-space: pre;
+}
+
+
+.btn--label:hover:before {
+    opacity: 1;
+}
+
+
+.show .btn--close {
+    border-radius: 50% !important;
+    background: #e6e6e6 !important;
+    border: none !important;
+}
+
+.show .btn--close span {
+    font-size: 20px;
+}
+
+.btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active, .show>.btn-outline-info.dropdown-toggle {
+    margin-right: 0 !important;
+}
+
+.btn-outline-secondary {
+    margin-right: 3px !important;
+}
+
+.modal-footer {
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.modal-footer .btn {
+    background: #f43ddb !important;
+    border-color: #f43ddb !important;
+    font-size: 21px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+.btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group, .btn-group-vertical .btn+.btn, .btn-group-vertical .btn+.btn-group, .btn-group-vertical .btn-group+.btn, .btn-group-vertical .btn-group+.btn-group {
+    margin-left: 0 !important;
 }
 /*-------------------------------media-------------------------------------------*/
 
