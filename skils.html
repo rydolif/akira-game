@@ -19,7 +19,11 @@
     <script src="static/js/device.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Neucha&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="static/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+
     <title>Флэш карты</title>
+
 </head>
 
 <body class="">
@@ -34,12 +38,11 @@
         <input type="hidden" id="voice_methodic" value="classic">
         <a class="navbar-brand" tabindex="-1" href="&#10;        &#10;            /games/&#10;       "></a>
 
-
-        <button type="button" tabindex="-1" class="navbar-toggler btn btn-warning my-2 my-sm-0 menu__btn" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Настройки" data-original-title="" title="">
+        <button type="button" class="hamburger" >
             <img src="img/header--item4.png" alt="">
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
+        <nav class="nav">
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item dropdown task-hidden">
@@ -50,7 +53,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown  tablet-hidden mobile-hidden ">
+                <li class="nav-item dropdown">
                     <a tabindex="-1" class="dropdown-toggle btn btn-outline-secondary" data-toggle="dropdown" href="#" id="themes">Players: <span class="screens_nmb_display">1</span></a>
                     <div class="dropdown-menu border-secondary text-center btn-outline-secondary2" aria-labelledby="themes">
                         <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(1)" href="#" data-value="1">1</a>
@@ -64,7 +67,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown tablet-hidden mobile-hidden">
+                <li class="nav-item dropdown">
                     <a tabindex="-1" href="#" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Скорость: <span class="interval_display">1</span> </a>
                     <div class="dropdown-menu border-danger text-center btn-outline-danger">
                         <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 0.1, screen_pk: 'global'})" href="#" data-value="0.1">0.1 сек </a>
@@ -86,7 +89,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown tablet-hidden mobile-hidden">
+                <li class="nav-item dropdown">
                     <a tabindex="-1" href="#" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cпицы: <span class="digits_nmb_display">4</span> </a>
                     <div class="dropdown-menu border-success text-center btn-outline-success">
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 1, screen_pk: 'global'})" href="#">1</a>
@@ -100,7 +103,148 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown tablet-hidden mobile-hidden">
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Примеров: <span class="impulses_nmb_display">1</span> </a>
+                    <div class="dropdown-menu border-info text-center btn-outline-info">
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 1, screen_pk: 'global'})" href="#">1</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 2, screen_pk: 'global'})" href="#">2</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 3, screen_pk: 'global'})" href="#">3</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 4, screen_pk: 'global'})" href="#">4</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 5, screen_pk: 'global'})" href="#">5</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 6, screen_pk: 'global'})" href="#">6</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 7, screen_pk: 'global'})" href="#">7</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 8, screen_pk: 'global'})" href="#">8</a>
+                    </div>
+                </li>
+
+                <li class="nav-pause nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Знаки: </a>
+                        <div class="dropdown-menu border-info text-center btn-outline-info">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary active">
+                            <input type="radio" name="sign" autocomplete="off" checked="" value="positive"> +
+                            </label>
+                            <label class="btn btn-outline-secondary">
+                            <input type="radio" name="sign"  autocomplete="off" value="negative"> -
+                            </label>
+                            </div>
+                        </div>
+                </li>
+
+                <li class="nav-pause nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Автомат: </a>
+                        <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control noclose">
+                            <div class="dropdown-items">Автоматические изменения<br /> в случае правильного решения примера</div>
+                                
+                            <div class="auto_left">
+                                <div class="dropleft">Паузы</div>   
+                                <div class="auto_right">
+                                    <div class="btn-group inc-dec-control">
+                                        
+                                        <label class="btn btn-nrm-2 btn-info input_decrease">  &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-info p-0">
+                                            <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="auto_left">
+                                <div class="dropleft">Спиц</div>                                
+                                <div class="auto_right">
+                                    <div class="btn-group inc-dec-control">                                   
+                                        <label class="btn btn-nrm-2 btn-success input_decrease">  &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-success p-0">
+                                            <input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auto_left">
+                                <div class="dropleft">Примеров</div>                                
+                                <div class="auto_right">
+                                    <div class="btn-group inc-dec-control">                                   
+                                        <label class="btn btn-nrm-2 btn-success input_decrease">  &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-success p-0">
+                                            <input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+                                                        
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary pull-right" id="modal_settings_confirm">Применить</button>
+                            </div>
+                        </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item dropdown task-hidden">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="anzan_nmb_display">Тип тренировки</span> </a>
+                    <div class="dropdown-menu border-info btn-outline-info noclose">
+                        <a class="dropdown-item" href="#" onclick="change_mode('abakus')">Aбакус</a>
+                        <a class="dropdown-item" href="#" onclick="change_mode('flash_card')">Числа</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown  tablet-hidden">
+                    <a tabindex="-1" class="dropdown-toggle btn btn-outline-secondary" data-toggle="dropdown" href="#" id="themes">Players: <span class="screens_nmb_display">1</span></a>
+                    <div class="dropdown-menu border-secondary text-center btn-outline-secondary2" aria-labelledby="themes">
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(1)" href="#" data-value="1">1</a>
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(2)" href="#" data-value="2">2</a>
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(3)" href="#" data-value="3">3</a>
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(4)" href="#" data-value="4">4</a>
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(5)" href="#" data-value="5">5</a>
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(6)" href="#" data-value="6">6</a>
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(7)" href="#" data-value="7">7</a>
+                        <a class="dropdown-item navbar_screens_nmb" onclick="create_screens(8)" href="#" data-value="8">8</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown tablet-hidden">
+                    <a tabindex="-1" href="#" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Скорость: <span class="interval_display">1</span> </a>
+                    <div class="dropdown-menu border-danger text-center btn-outline-danger">
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 0.1, screen_pk: 'global'})" href="#" data-value="0.1">0.1 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 0.2, screen_pk: 'global'})" href="#" data-value="0.2">0.2 сек</a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 0.3, screen_pk: 'global'})" href="#" data-value="0.3">0.3 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 0.4, screen_pk: 'global'})" href="#" data-value="0.4">0.4 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 0.5, screen_pk: 'global'})" href="#" data-value="0.5">0.5 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 0.7, screen_pk: 'global'})" href="#" data-value="0.7">0.7 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 1, screen_pk: 'global'})" href="#" data-value="1">1 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 1.2, screen_pk: 'global'})" href="#" data-value="1.2">1.2 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 1.5, screen_pk: 'global'})" href="#" data-value="1.5">1.5 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 1.8, screen_pk: 'global'})" href="#" data-value="1.8">1.8 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 2, screen_pk: 'global'})" href="#" data-value="2">2 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 2.5, screen_pk: 'global'})" href="#" data-value="2.5">2.5 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 3, screen_pk: 'global'})" href="#" data-value="3">3 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 3.5, screen_pk: 'global'})" href="#" data-value="3.5">3.5 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 4, screen_pk: 'global'})" href="#" data-value="4">4 сек </a>
+                        <a class="dropdown-item navbar_interval" onclick="edit_parameter({value_type: 'interval', value: 5, screen_pk: 'global'})" href="#" data-value="5">5 сек </a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown tablet-hidden">
+                    <a tabindex="-1" href="#" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cпицы: <span class="digits_nmb_display">4</span> </a>
+                    <div class="dropdown-menu border-success text-center btn-outline-success">
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 1, screen_pk: 'global'})" href="#">1</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 2, screen_pk: 'global'})" href="#">2</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 3, screen_pk: 'global'})" href="#">3</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 4, screen_pk: 'global'})" href="#">4</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 5, screen_pk: 'global'})" href="#">5</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 6, screen_pk: 'global'})" href="#">6</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 7, screen_pk: 'global'})" href="#">7</a>
+                        <a class="dropdown-item" onclick="edit_parameter({value_type: 'digits_nmb', value: 8, screen_pk: 'global'})" href="#">8</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown tablet-hidden">
                     <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Примеров: <span class="impulses_nmb_display">1</span> </a>
                     <div class="dropdown-menu border-info text-center btn-outline-info">
                         <a class="dropdown-item" onclick="edit_parameter({value_type: 'impulses_nmb', value: 1, screen_pk: 'global'})" href="#">1</a>
@@ -115,7 +259,7 @@
                 </li>
 
 
-                <li class="nav-pause nav-item dropdown tablet-hidden mobile-hidden">
+                <li class="nav-pause nav-item dropdown tablet-hidden">
                     <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Знаки: </a>
                     <div class="card-body text-center p-2">
                         <div class="dropdown-menu border-info text-center btn-outline-info">
@@ -131,9 +275,7 @@
                     </div>
                 </li>
 
-				
-				
-                <li class="nav-pause nav-item dropdown tablet-hidden mobile-hidden">
+				<li class="nav-pause nav-item dropdown tablet-hidden">
                     <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Автомат: </a>
                     <div class="card-body text-center p-2">
                             <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control noclose">
@@ -142,14 +284,14 @@
 								<div class="auto_left">
 									<div class="dropleft">Паузы</div>	
 									<div class="auto_right">
-<div class="btn-group inc-dec-control">
-                                    
-                                    <label class="btn btn-nrm-2 btn-info input_decrease">  &lt; </label>
-                                    <label class="btn btn-nrm-2 btn-info p-0">
-                                        <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
-                                    </label>
-                                    <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
-                                </div>
+                                        <div class="btn-group inc-dec-control">
+                                            
+                                            <label class="btn btn-nrm-2 btn-info input_decrease">  &lt; </label>
+                                            <label class="btn btn-nrm-2 btn-info p-0">
+                                                <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                            </label>
+                                            <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                                        </div>
 									</div>
 								</div>
 								
@@ -189,9 +331,8 @@
 
 
             </ul>
-
-
         </div>
+
     </nav>
     <script>
         $(document).ready(function () {
@@ -2942,7 +3083,7 @@
         <div class="wrapp">\
         <input type="number"  inputmode="numeric" name="answer_input" data-number="1" class="form-control answer_input text-center" placeholder="Ответ" style="font-size: 36px">\
         <div class="input-group-append">\
-        <span class="btn btn-primary btn_start pr-3 pl-3" style="font-size:40px">ОК</span>\
+        <span class="btn btn-primary btn_start pr-3 pl-3" style="font-size:40px; line-height:72px">ОК</span>\
         </div>\
         </div>\
         </div>\

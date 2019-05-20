@@ -7,664 +7,616 @@
     <meta name="description" content="mindskills.ru - это лучшая онлайн платформа по ментальной арифметике с красочными тренажерами с  настраиваемыми параметрами  для каждого ученика, с удобной и простой CRM системой учета посещений, оплат, с возможностью задавать домашние задания, с детальной статистикой выполнения заданий, а также онлайн баттлы, онлайн олимпиады, рейтинги и многое другое">
     <meta name="yandex-verification" content="b0b2abeb71178a3b">
     <meta name="google-site-verification" content="Oq6HwhQkLG9zKCfUXwetAn2-EIee9lmoTA6vk2LRT6U">
-    <link rel="shortcut icon" href="/testos/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/testos/static/css/bootstrap4.css">
-    <link rel="stylesheet" href="/testos/static/css/bootstrap4_additional2.css">
-    <link rel="stylesheet" href="/testos/static/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
-    <script src="/testos/static/AdminLTE/jquery.min.js"></script>
-    <script src="/testos/static/js/popper.min.js"></script>
-    <script src="/testos/static/js/bootsrap4.min.js"></script>
-    <script src="/testos/static/js/device.min.js"></script>
-    <script src="/testos/static/js/sketchy_bootstrap4.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/bootstrap4.css">
+    <link rel="stylesheet" href="static/css/bootstrap4_additional2.css">
+    <link rel="stylesheet" href="static/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <script src="static/AdminLTE/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootsrap4.min.js"></script>
+    <script src="static/js/device.min.js"></script>
+    <script src="static/js/sketchy_bootstrap4.js"></script>
+    <script src="static/main.js"></script>
+
     <style>
         .number-inherit {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-        -webkit-animation-duration: 0.05s; /* Safari 4.0 - 8.0 */
-        animation-name: example;
-        animation-duration: 0.05s;
-    }
-
-    /* Safari 4.0 - 8.0 */
-    @-webkit-keyframes example {
-        from {
-            color: green;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.05s; /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 0.05s;
         }
-        to {
-            color: inherit !important;
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+            from {
+                color: green;
+            }
+            to {
+                color: inherit !important;
+            }
         }
-    }
 
-    /* Standard syntax */
-    @keyframes example {
-        from {
-            color: green;
+        /* Standard syntax */
+        @keyframes example {
+            from {
+                color: green;
+            }
+            to {
+                color: inherit !important;
+            }
         }
-        to {
-            color: inherit !important;
+
+        input, h1, h2, h3, h4, div {
+            font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
         }
-    }
-
-    input, h1, h2, h3, h4, div {
-        font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    }
-
-    .bg-light-success {
-        background-color: #1d8120;
-        color: white;
-    }
-
-    .bg-light-danger {
-        background-color: #9b2728;
-        color: white;
-    }
-
-    .bg-light-info {
-        background-color: #03819c;
-        color: white;
-    }
-
-    .bg-light-secondary {
-        background-color: #3d3a3e;
-        color: white;
-    }
-
-    .btn-warning, .btn-outline-warning {
-        color: black;
-    }
-
-    .screen-success {
-        background-color: rgba(151, 218, 93, 0.9) !important;
-    }
-
-    .screen-info {
-        background-color: rgba(160, 209, 218, 0.9) !important;
-    }
-
-    .screen-error {
-        background-color: rgba(255, 175, 135, 0.9) !important;
-    }
-
-    .btn-keyboard-tablet-landscape > .btn-keyboard {
-        height: 9vh;
-        width: 9vh;
-        font-size: 6vh;
-    }
-
-    .btn-keyboard-tablet-portrait > .btn-keyboard {
-        height: 6vh;
-        width: 6vh;
-        font-size: 3vh;
-    }
-
-    .btn-keyboard {
-        height: 6vh;
-        width: 6vh;
-        font-size: 3vh;
-    }
-
-    .btn-keyboard-group-lg > .btn-keyboard {
-        height: 9vh;
-        width: 9vh;
-        font-size: 6vh;
-    }
-
-    .btn-keyboard-group-md > .btn-keyboard {
-        height: 8vh;
-        width: 8vh;
-        font-size: 4vh;
-    }
-
-    .btn-keyboard-group-sm > .btn-keyboard {
-        height: 6vh;
-        width: 6vh;
-        font-size: 3vh;
-    }
-
-    .btn-keyboard-group-xs > .btn-keyboard {
-        height: 9vh;
-        width: 9vh;
-        font-size: 5vh;
-    }
-
-    .neucha {
-        font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    }
-
-    .segoe {
-        font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif !important;
-        font-weight: 400 !important;
-    }
-    .roboto {
-        font-family: "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    }
-
-    .jokerman {
-        font-family: "Jokerman", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    }
-
-    .showcard {
-        font-family: "Showcard Gothic", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    }
-
-    .playbill {
-        font-family: "Playbill", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    }
-
-    .dfpop1 {
-        font-family: "DFPOP1-W9", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    }
-
-    .btn-warning {
-        color: black;
-    }
-
-    .btn-outline-warning {
-        color: black;
-    }
-
-    .btn-outline-warning.active {
-        color: black !important;
-    }
-
-    .btn-outline-warning.disabled {
-        color: black !important;
-    }
-
-    .btn-outline-info.active:hover {
-        background-color: #138496 !important;
-    }
-
-    .btn-outline-info:hover {
-        background-color: #16b9ce !important;
-    }
-
-    .btn-outline-success.active:hover {
-        background-color: #218838 !important;
-    }
-
-    .btn-outline-danger.active:hover {
-        background-color: #c82333 !important;
-    }
-
-    .btn-outline-warning.active:hover {
-        background-color: #e0a800 !important;
-    }
-
-    .margin-bottom-0 {
-        margin-bottom: 0;
-    }
-
-    .btn-purple {
-        background-color: #8722ae;
-        color: white;
-    }
-
-    .border-purple {
-        border-color: #8722ae;
-    }
-
-    .btn-purple:hover {
-        background-color: #6c2191;
-        color: white;
-    }
-
-    .btn-outline-purple:hover {
-        background-color: #eacdfb;
-        color: white;
-    }
-
-    .margin-bottom-5 {
-        margin-bottom: 2.5vh !important;
-    }
-
-    .btn-outline-secondary2:hover {
-        background-color: #878787;
-    }
-
-/*    .bg_1 {
-        background: url(/testos/static/img_game/bgs/bg_1.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_2 {
-        background: url(/testos/static/img_game/bgs/bg_2.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_3 {
-        background: url(/testos/static/img_game/bgs/bg_3.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_4 {
-        background: url(/testos/static/img_game/bgs/bg_4.jpeg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_5 {
-        background: url(/testos/static/img_game/bgs/bg_5.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_6 {
-        background: url(/testos/static/img_game/bgs/bg_6.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_7 {
-        background: url(/testos/static/img_game/bgs/bg_7.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_8 {
-        background: url(/testos/static/img_game/bgs/bg_8.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_9 {
-        background: url(/testos/static/img_game/bgs/bg_9.jpeg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .bg_10 {
-        background: url(/testos/static/img_game/bgs/bg_10.jpg) center center no-repeat;
-        background-size: cover;
-    }*/
-
-    .margin-left-right-10 {
-        margin-left: 10px;
-        margin-right: 10px
-    }
-
-    .margin-left-right-20 {
-        margin-left: 20px;
-        margin-right: 20px
-    }
-
-    .margin-left-right-30 {
-        margin-left: 30px;
-        margin-right: 30px
-    }
-
-    .true_answer_image_1 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_1.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_2 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_2.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_3 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_3.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_4 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_4.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_5 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_5.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_6 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_6.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_7 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_7.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_8 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_8.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_9 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_9.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_10 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_10.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_11 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_11.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .true_answer_image_12 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_12.png) center center no-repeat;
-        background-size: contain
-    }
-    .true_answer_image_13 {
-        background: url(/testos/static/img_game/heroes_2018/true_hero/true_hero_13.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_1 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_1.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_2 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_2.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_3 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_3.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_4 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_4.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_5 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_5.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_6 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_6.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_7 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_7.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_8 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_8.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_9 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_9.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_10 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_10.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_11 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_11.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_12 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_12.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .false_answer_image_13 {
-        background: url(/testos/static/img_game/heroes_2018/false_hero/false_hero_13.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_0 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_1 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_2 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_3 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_4 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_5 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_6 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_7 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_8 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_9 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .left_hero_10 {
-        background: url(/testos/img/left.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_0 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_1 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_2 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_3 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_4 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_5 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_6 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_7 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_8 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_9 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .right_hero_10 {
-        background: url(/testos/img/right.png) center center no-repeat;
-        background-size: contain
-    }
-
-    .bg_color_1, .bg_color_4, .bg_color_7, .bg_color_10 {
-        background-color: rgba(255, 255, 204, 0.9);
-    }
-
-    .bg_color_2, .bg_color_5, .bg_color_8 {
-        background-color: rgba(255, 243, 205, 0.9);
-    }
-
-    .bg_color_3, .bg_color_6, .bg_color_9 {
-        background-color: rgba(255, 222, 181, 0.9);
-    }
-
-    .color-black {
-        color: black !important;
-    }
-
-    .tooltip {
-        z-index: 500;
-        opacity: 1 !important;
-        top: 35px;
-    }
-
-    .card-slider {
-        padding: 0
-    }
-
-    .tooltip-inner {
-        border: 1px solid #333333;
-    }
-
-    .bg-success {
-        color: white !important;
-    }
-
-    .bg-info {
-        color: white !important;
-    }
-
-    .bg-warning {
-        color: black !important;
-    }
-
-    .slider-handle {
-        top: -5px;
-        width: 0;
-        height: 0;
-    }
-
-    .change-value {
-        width: 100%;
-    }
-
-    .btn-nrm {
-        margin-bottom: 3px
-    }
-
-    .padding-left-right-0 {
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-    }
-
-    .slider-horizontal {
-        width: 100% !important;
-    }
-
-    #RGB {
-        height: 20px;
-        background: rgb(128, 128, 128);
-    }
-
-    #interval_slider .slider-track-high {
-        background: #fc3648;
-    }
-
-    #interval_slider .slider-handle {
-        background: #dc3545;
-    }
-
-    #RC .slider-selection {
-        background: #fc3648;
-    }
-
-    #RC .slider-handle {
-        background: #dc3545;
-    }
-
-    #GC .slider-selection {
-        background: #2bc64e;
-    }
-
-    #GC .slider-handle {
-        background: #28a745;
-    }
-
-    #BC .slider-selection {
-        background: #17bfd5;
-    }
-
-    #BC .slider-handle {
-        border-bottom-color: #17a2b8;
-    }
-
-    #BC .slider-handle {
-        background: #17a2b8;
-    }
-
-    #GrC .slider-selection {
-        background: #666;
-    }
-
-    #GrC .slider-handle {
-        background: #444;
-    }
-
-    #R, #G, #B {
-        width: 300px;
-    }
-
-    .margin-bottom-0 {
-        margin-bottom: 0;
-    }
-
-    .popover {
-        z-index: 2000;
-    }
-</style>
-    <link href="https://fonts.googleapis.com/css?family=Neucha&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/testos/css/main.css">
+
+        .bg-light-success {
+            background-color: #1d8120;
+            color: white;
+        }
+
+        .bg-light-danger {
+            background-color: #9b2728;
+            color: white;
+        }
+
+        .bg-light-info {
+            background-color: #03819c;
+            color: white;
+        }
+
+        .bg-light-secondary {
+            background-color: #3d3a3e;
+            color: white;
+        }
+
+        .btn-warning, .btn-outline-warning {
+            color: black;
+        }
+
+        .screen-success {
+            background-color: rgba(151, 218, 93, 0.9) !important;
+        }
+
+        .screen-info {
+            background-color: rgba(160, 209, 218, 0.9) !important;
+        }
+
+        .screen-error {
+            background-color: rgba(255, 175, 135, 0.9) !important;
+        }
+
+        .btn-keyboard-tablet-landscape > .btn-keyboard {
+            height: 9vh;
+            width: 9vh;
+            font-size: 6vh;
+        }
+
+        .btn-keyboard-tablet-portrait > .btn-keyboard {
+            height: 6vh;
+            width: 6vh;
+            font-size: 3vh;
+        }
+
+        .btn-keyboard {
+            height: 6vh;
+            width: 6vh;
+            font-size: 3vh;
+        }
+
+        .btn-keyboard-group-lg > .btn-keyboard {
+            height: 9vh;
+            width: 9vh;
+            font-size: 6vh;
+        }
+
+        .btn-keyboard-group-md > .btn-keyboard {
+            height: 8vh;
+            width: 8vh;
+            font-size: 4vh;
+        }
+
+        .btn-keyboard-group-sm > .btn-keyboard {
+            height: 6vh;
+            width: 6vh;
+            font-size: 3vh;
+        }
+
+        .btn-keyboard-group-xs > .btn-keyboard {
+            height: 9vh;
+            width: 9vh;
+            font-size: 5vh;
+        }
+
+        .neucha {
+            font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        }
+
+        .segoe {
+            font-family: "Segoe UI", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif !important;
+            font-weight: 400 !important;
+        }
+        .roboto {
+            font-family: "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        }
+
+        .jokerman {
+            font-family: "Jokerman", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        }
+
+        .showcard {
+            font-family: "Showcard Gothic", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        }
+
+        .playbill {
+            font-family: "Playbill", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        }
+
+        .dfpop1 {
+            font-family: "DFPOP1-W9", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+        }
+
+        .btn-warning {
+            color: black;
+        }
+
+        .btn-outline-warning {
+            color: black;
+        }
+
+        .btn-outline-warning.active {
+            color: black !important;
+        }
+
+        .btn-outline-warning.disabled {
+            color: black !important;
+        }
+
+        .btn-outline-info.active:hover {
+            background-color: #138496 !important;
+        }
+
+        .btn-outline-info:hover {
+            background-color: #16b9ce !important;
+        }
+
+        .btn-outline-success.active:hover {
+            background-color: #218838 !important;
+        }
+
+        .btn-outline-danger.active:hover {
+            background-color: #c82333 !important;
+        }
+
+        .btn-outline-warning.active:hover {
+            background-color: #e0a800 !important;
+        }
+
+        .margin-bottom-0 {
+            margin-bottom: 0;
+        }
+
+        .btn-purple {
+            background-color: #8722ae;
+            color: white;
+        }
+
+        .border-purple {
+            border-color: #8722ae;
+        }
+
+        .btn-purple:hover {
+            background-color: #6c2191;
+            color: white;
+        }
+
+        .btn-outline-purple:hover {
+            background-color: #eacdfb;
+            color: white;
+        }
+
+        .margin-bottom-5 {
+            margin-bottom: 2.5vh !important;
+        }
+
+        .btn-outline-secondary2:hover {
+            background-color: #878787;
+        }
+
+        .margin-left-right-10 {
+            margin-left: 10px;
+            margin-right: 10px
+        }
+
+        .margin-left-right-20 {
+            margin-left: 20px;
+            margin-right: 20px
+        }
+
+        .margin-left-right-30 {
+            margin-left: 30px;
+            margin-right: 30px
+        }
+
+        .true_answer_image_1 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_1.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_2 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_3 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_3.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_4 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_4.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_5 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_5.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_6 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_6.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_7 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_7.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_8 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_8.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_9 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_9.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_10 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_10.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_11 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_11.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .true_answer_image_12 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_12.png) center center no-repeat;
+            background-size: contain
+        }
+        .true_answer_image_13 {
+            background: url(static/img_game/heroes_2018/true_hero/true_hero_13.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_1 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_1.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_2 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_3 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_3.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_4 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_4.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_5 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_5.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_6 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_6.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_7 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_7.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_8 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_8.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_9 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_9.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_10 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_10.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_11 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_11.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_12 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_12.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .false_answer_image_13 {
+            background: url(static/img_game/heroes_2018/false_hero/false_hero_13.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_0 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_1 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_2 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_3 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_4 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_5 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_6 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_7 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_8 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_9 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .left_hero_10 {
+            background: url(img/left2.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_0 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_1 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_2 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_3 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_4 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_5 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_6 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_7 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_8 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_9 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .right_hero_10 {
+            background: url(img/right.png) center center no-repeat;
+            background-size: contain
+        }
+
+        .bg_color_1, .bg_color_4, .bg_color_7, .bg_color_10 {
+            background-color: rgba(255, 255, 204, 0.9);
+        }
+
+        .bg_color_2, .bg_color_5, .bg_color_8 {
+            background-color: rgba(255, 243, 205, 0.9);
+        }
+
+        .bg_color_3, .bg_color_6, .bg_color_9 {
+            background-color: rgba(255, 222, 181, 0.9);
+        }
+
+        .color-black {
+            color: black !important;
+        }
+
+        .tooltip {
+            z-index: 500;
+            opacity: 1 !important;
+            top: 35px;
+        }
+
+        .card-slider {
+            padding: 0
+        }
+
+        .tooltip-inner {
+            border: 1px solid #333333;
+        }
+
+        .bg-success {
+            color: white !important;
+        }
+
+        .bg-info {
+            color: white !important;
+        }
+
+        .bg-warning {
+            color: black !important;
+        }
+
+        .slider-handle {
+            top: -5px;
+            width: 0;
+            height: 0;
+        }
+
+        .change-value {
+            width: 100%;
+        }
+
+        .btn-nrm {
+            margin-bottom: 3px
+        }
+
+        .padding-left-right-0 {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        .slider-horizontal {
+            width: 100% !important;
+        }
+
+        #RGB {
+            height: 20px;
+            background: rgb(128, 128, 128);
+        }
+
+        #interval_slider .slider-track-high {
+            background: #fc3648;
+        }
+
+        #interval_slider .slider-handle {
+            background: #dc3545;
+        }
+
+        #RC .slider-selection {
+            background: #fc3648;
+        }
+
+        #RC .slider-handle {
+            background: #dc3545;
+        }
+
+        #GC .slider-selection {
+            background: #2bc64e;
+        }
+
+        #GC .slider-handle {
+            background: #28a745;
+        }
+
+        #BC .slider-selection {
+            background: #17bfd5;
+        }
+
+        #BC .slider-handle {
+            border-bottom-color: #17a2b8;
+        }
+
+        #BC .slider-handle {
+            background: #17a2b8;
+        }
+
+        #GrC .slider-selection {
+            background: #666;
+        }
+
+        #GrC .slider-handle {
+            background: #444;
+        }
+
+        #R, #G, #B {
+            width: 300px;
+        }
+
+        .margin-bottom-0 {
+            margin-bottom: 0;
+        }
+
+        .popover {
+            z-index: 2000;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+
     <title>Счет на скорость</title>
 </head>
 
 <body class="">
     <nav class="navbar navbar-expand-lg border-info navbar-light screen" style="height: 10vh; background-color: #e2f7df" id="navbar">
         <a class="navbar-brand" tabindex="-1" href="&#10;        &#10;            /games/&#10;        "></a>
-        <button tabindex="-1" class="navbar-toggler" type="button" data-toggle="modal" data-target="#modal_global_settings" aria-expanded="false" aria-label="Toggle navigation" style="">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
         <span class="hidden" id="csrf_check">
             <input type="hidden" name="csrfmiddlewaretoken" value="NmyUbcup0TAEeVQLoVqV1rnVr59HppRBoDKlgXyZH4pNwPD1G9w2qItgiLnVunfK">
             <input type="hidden" id="check_url" value="/csrf_check">
@@ -673,31 +625,41 @@
         <input type="hidden" id="module_names" value="/games/api/module_names/">
         <input type="hidden" id="name_methodic" value="abakus">
         <input type="hidden" id="voice_methodic" value="classic">
-        <div class="collapse navbar-collapse" id="navbarColor03">
+
+        <button type="button" class="hamburger" >
+            <img src="img/header--item4.png" alt="">
+        </button>
+
+        <nav class="nav">
             <ul class="navbar-nav mr-auto ">
-                <li class="nav-item dropdown  d-lg-none d-xl-block  tablet-hidden mobile-hidden">
+
+                <li class="nav-item dropdown">
                     <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle modules_display_short module_simple_title_short modules_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Простой счет</a>
                     <div class="dropdown-menu border-info btn-outline-info">
-                        <a class="dropdown-item modules bg-info module_simple_title" href="#" data-value="simple">Простой счет</a>
-                        <a class="dropdown-item modules module_brother_title" href="#" data-value="brother" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="+1 = +5 - 4       -1 = -5 + 4  <br> +2 = +5 - 3       -2 = -5 + 3<br> +3 = +5 - 2       -3 = -5 + 2 <br> +4 = +5 - 1       -4 = -5 + 1" data-original-title="Формулы помощи брата">Помощь брата</a>
-                        <a class="dropdown-item modules module_friend_title" href="#" data-value="friend,brother_fr" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="+1 = +10 - 9       -1 = -10 + 9  <br>  +2 = +10 - 8       -2 = -10 + 8 <br> +3 = +10 - 7       -3 = -10 + 7 <br> +4 = +10 - 6       -4 = -10 + 6<br> +5 = +10 - 5       -5 = -10 + 5<br> +6 = +10 - 4       -6 = -10 + 4<br> +7 = +10 - 3       -7 = -10 + 3<br> +8 = +10 - 2       -8 = -10 + 2<br> +9 = +10 - 1       -9 = -10 + 1" data-original-title="Формулы помощи друга">Помощь друга</a>
-                        <a class="dropdown-item modules module_combo_title" href="#" data-value="combo" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content=" <p> +6 = +11 - 5       -6 = -11 + 5  <br> +6 = +10 - 5 + 1     -6 = -10 + 5 - 1</p> <p> +7 = +12 - 5       -7 = -12 + 5<br> +7 = +10 - 5 + 2      -7 = -10 + 5 - 2</p> <p> +8 = +13 - 5       -8 = -13 + 5 <br> +8 = +10 - 5 + 3     -8 = -10 + 5 -3 </p> <p> +9 = +14 - 5       -9 = -14 + 5 <br> +9 = +10 - 5 + 4     -9 = -10 + 5 - 4" data-original-title="Формулы комбинированного счета 10-ки и 5-ки">Комбинированный счет</a>
-                        <a class="dropdown-item modules module_random_title" href="#" data-value="random" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" data-content="Генерируются случайные числа. <br>  В настройках ниже можно включить генерацию и отрицательных чисел: Кнопка ЗНАК" data-original-title="" title="">Произвольный</a>
+                        <a class="dropdown-item modules bg-info module_simple_title" href="#" data-value="simple">Прямой счет</a>
+                        <a class="dropdown-item modules module_brother_title" href="#" data-value="brother" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >Младшие товарищи</a>
+                        <a class="dropdown-item modules module_friend_title" href="#" data-value="friend,brother_fr" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Старшие товарищи</a>
+                        <a class="dropdown-item modules module_combo_title" href="#" data-value="combo" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Микс формулы</a>
+                        <a class="dropdown-item modules module_random_title" href="#" data-value="random" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true"data-original-title="" title="">Все формулы</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown d-lg-none d-xl-block  tablet-hidden mobile-hidden">
-                    <a tabindex="-1" href="#" class="btn btn-outline-success dropdown-toggle operation_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Слож-е/Выч-е</a>
-                    <div class="dropdown-menu border-success text-center btn-outline-success">
-                        <a class="dropdown-item operation" href="#" data-value="plus">Сложение</a>
-                        <a class="dropdown-item operation" href="#" data-value="minus">Вычитание</a>
-                        <a class="dropdown-item operation bg-success" href="#" data-value="plus_minus">Сложение/Вычитание</a>
-                        <div class="dropdown-divider just_operation d-none"></div>
-                        <a class="dropdown-item operation just_operation d-none" href="#" data-value="just_plus">Только сложение</a>
-                        <a class="dropdown-item operation just_operation d-none" href="#" data-value="just_minus">Только вычитание</a>
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" class="dropdown-toggle btn btn-outline-secondary" data-toggle="dropdown" href="#" id="themes">Players <span class="players_nmb">1</span></a>
+                    <div class="dropdown-menu border-secondary text-center btn-outline-secondary2" aria-labelledby="themes">
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="1">1</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="2">2</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="3">3</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="4">4</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="5">5</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="6">6</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="7">7</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="8">8</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown d-lg-none d-xl-block  tablet-hidden mobile-hidden">
-                    <a tabindex="-1" href="#" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Цифр: <span class="digits_nmb_display">1</span> </a>
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Знаков <span class="digits_nmb_display">1</span> </a>
                     <div class="dropdown-menu border-success text-center btn-outline-success">
                         <a class="dropdown-item navbar_digits_nmb" href="#" data-value="1">1</a>
                         <a class="dropdown-item navbar_digits_nmb" href="#" data-value="2">2</a>
@@ -707,14 +669,11 @@
                         <a class="dropdown-item navbar_digits_nmb" href="#" data-value="6">6</a>
                         <a class="dropdown-item navbar_digits_nmb" href="#" data-value="7">7</a>
                         <a class="dropdown-item navbar_digits_nmb" href="#" data-value="8">8</a>
-                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="9">9</a>
-                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="10">10</a>
-                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="11">11</a>
-                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="12">12</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown d-lg-none d-xl-block  tablet-hidden mobile-hidden">
-                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Действий: <span class="actions_nmb_display">5</span>
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">D <span class="actions_nmb_display">5</span>
                     </a>
                     <div class="dropdown-menu border-info text-center btn-outline-info">
                         <a class="dropdown-item navbar_actions_nmb" href="#" data-value="2">2</a>
@@ -732,7 +691,8 @@
                         <a class="dropdown-item navbar_actions_nmb" href="#" data-value="50">50</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown d-lg-none d-xl-block  tablet-hidden mobile-hidden">
+
+                <li class="nav-item dropdown">
                     <a tabindex="-1" href="#" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Скорость: <span class="interval_display">1</span> </a>
                     <div class="dropdown-menu border-danger text-center btn-outline-danger">
                         <a class="dropdown-item navbar_interval" href="#" data-value="0.1">0.1 сек </a>
@@ -751,70 +711,11 @@
                         <a class="dropdown-item navbar_interval" href="#" data-value="3.5">3.5 сек </a>
                         <a class="dropdown-item navbar_interval" href="#" data-value="4">4 сек </a>
                         <a class="dropdown-item navbar_interval" href="#" data-value="5">5 сек </a>
-                        <a class="dropdown-item navbar_interval" href="#" data-value="7">7 сек </a>
-                        <a class="dropdown-item navbar_interval" href="#" data-value="10">10 сек </a>
                     </div>
                 </li>
-                <li class="nav-item dropdown d-lg-none d-xl-block  mobile-hidden ">
-                    <a tabindex="-1" class="dropdown-toggle btn btn-outline-secondary" data-toggle="dropdown" href="#" id="themes">Игроков: <span class="players_nmb">1</span></a>
-                    <div class="dropdown-menu border-secondary text-center btn-outline-secondary2" aria-labelledby="themes">
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="1">1</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="2">2</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="3">3</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="4">4</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="5">5</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="6">6</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="7">7</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="8">8</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="9">9</a>
-                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="10">10</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown tablet-hidden mobile-hidden">
-                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Режим <span class="mode_display"></span> </a>
-                    <div class="dropdown-menu border-warning btn-outline-warning noclose">
-                        <a class="dropdown-item mode" data-mode_type="default" href="#"> <input type="hidden" value="off"> <span class="activity"><i class="fa fa-check"></i></span> <span class="title">Выкл. все режимы</span>
-                        </a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="negative" href="#">
-                            <input type="hidden" value="off"><span class="activity"></span> <span class="title">Отрицательные числа</span>
-                        </a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="disorder" href="#">
-                            <input type="hidden" value="off"><span class="activity"></span> <span class="title">Разброс</span>
-                        </a>
-                        <a class="dropdown-item mode" data-mode_type="2_screens" href="#">
-                            <input type="hidden" value="off"><span class="activity"></span> <span class="title">2 Экрана</span>
-                        </a>
-                        <a class="dropdown-item mode" data-mode_type="3_screens" href="#">
-                            <input type="hidden" value="off"><span class="activity"></span> <span class="title">3 Экрана</span>
-                        </a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="decimal_1" href="#">
-                            <input type="hidden" value="off">
-                            <span class="activity"></span>
-                            <span class="title">Дробные числа (1 знак )</span>
-                        </a>
-                        <a class="dropdown-item mode" data-mode_type="decimal_2" href="#">
-                            <input type="hidden" value="off">
-                            <span class="activity"></span>
-                            <span class="title">Дробных числа (2 знака )</span>
-                        </a>
-                        <div class="dropdown-divider border-secondary"></div>
-                        <a class="dropdown-item mode" data-mode_type="mode_50" href="#">
-                            <input type="hidden" value="off">
-                            <span class="activity"></span> <span class="title">Переход через 50</span>
-                        </a>
-                        <a class="dropdown-item mode" data-mode_type="mode_100" href="#">
-                            <input type="hidden" value="off">
-                            <span class="activity"></span> <span class="title">Переход через 100</span>
-                        </a>
-                    </div>
-                </li>
+
                 <li class="nav-item dropdown">
-                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i>
-                        <span class="mode_display"></span>
-                    </a>
+                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Опции <span class="mode_display"></span> </a>
                     <div class="dropdown-menu border-warning btn-outline-warning noclose">
                         <a class="dropdown-item btn_double_sign_mode" href="#"><i class="fa fa-check d-none"></i> Режим двойных знаков
                         </a>
@@ -833,51 +734,190 @@
                         </a>
                     </div>
                 </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button type="button" tabindex="-1" class="btn btn-danger my-2 my-sm-0" id="btn_global_refresh" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Обнулить" data-original-title="" title="">
-                    <img src="img/header--item1.png" alt="">
-                </button>
-                <div class="main_btn_group form-inline">
-                    <button type="button" tabindex="-1" class="btn btn-secondary my-2 my-sm-0 hidden" id="btn_global_restart" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Заново" data-original-title="" title=""><i class="fa fa-refresh"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-purple my-2 my-sm-0 hidden" id="btn_global_show_example" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Показать примеры" data-original-title="" title=""><i class="fa fa-eye"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-success my-2 my-sm-0 hidden" id="btn_global_show_result" onclick="$('#modal_result').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Результаты" data-original-title="" title=""><i class="fa fa-thumbs-up"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-info my-2 my-sm-0 hidden" id="btn_global_check_answer" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Проверить" data-original-title="" title=""><i class="fa fa-question"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-success my-2 my-sm-0" id="btn_global_start" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Старт" data-original-title="" title="">
-                        <img src="img/header--item2.png" alt="">
-                    </button>
-                    <button type="button" tabindex="-1" class="btn btn-success my-2 my-sm-0 hidden" id="btn_global_next" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Следующий" data-original-title="" title=""><i class="fa fa-forward"></i></button>
-                    <button type="button" tabindex="-1" class="btn btn-success my-2 my-sm-0 hidden" id="btn_global_continue" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Продолжить" data-original-title="" title="">
-                        <img src="img/header--item2.png" alt="">
-                    </button>
-                </div>
-                <button type="button" id="btn_global_stop" tabindex="-1" class="btn btn-danger my-2 my-sm-0" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Стоп" data-original-title="" title=""><i class="fa fa-stop"></i></button>
-                <div class="btn-group" role="group">
-                    <button type="button" tabindex="-1" class="btn btn-warning my-2 my-sm-0" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Настройки" data-original-title="" title="">
-                        <img src="img/header--item4.png" alt="">
-                    </button>
-                </div>
-                <button type="button" tabindex="-1" class="btn btn-success show_res my-2 my-sm-0" id="show_res" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content=" Результаты" data-original-title="" title=""><i class="fa fa-thumbs-up"></i></button>
-                <script>
-                    function show_example_num() {
-                            $countdown_blocks = $(".block[data-block_type='countdown_block']");
-                            $countdown_blocks.css("color", "black");
-                            $screen_bg_color = $(".bg_color");
-                            $screen_bg_color.removeClass("screen-info screen-error screen-success");
-                            show_block("countdown_block", "navbar");
-                            $countdown_blocks.val("Пример " + example_num.toString())
-                        }
 
-                        $(document).ready(function () {
-                            $(".show_res").on("click", function () {
-                                show_result()
-                            });
-                            $("#show_example_num").on("click", function () {
-                                show_example_num()
-                            })
-                        })
-                    </script>
-            </form>
+                <li class="nav-pause nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Автомат: </a>
+                        <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control noclose">
+                            <div class="dropdown-items">Автоматические изменения<br /> в случае правильного решения примера</div>
+                                
+                            <div class="auto_left">
+                                <div class="dropleft">Паузы</div>   
+                                <div class="auto_right">
+                                    <div class="btn-group inc-dec-control">
+                                        
+                                        <label class="btn btn-nrm-2 btn-info input_decrease">  &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-info p-0">
+                                            <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auto_left">
+                                <div class="dropleft">Знаков</div>
+                                <div class="auto_right">
+                                    <div class="btn-group inc-dec-control">  
+                                        <label class="btn btn-nrm-2 btn-success input_decrease"> &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-success p-0">
+                                            <input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary pull-right" id="modal_settings_confirm">Применить</button>
+                            </div>
+                        </div>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto ">
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle modules_display_short module_simple_title_short modules_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Простой счет</a>
+                    <div class="dropdown-menu border-info btn-outline-info">
+                        <a class="dropdown-item modules bg-info module_simple_title" href="#" data-value="simple">Прямой счет</a>
+                        <a class="dropdown-item modules module_brother_title" href="#" data-value="brother" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >Младшие товарищи</a>
+                        <a class="dropdown-item modules module_friend_title" href="#" data-value="friend,brother_fr" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Старшие товарищи</a>
+                        <a class="dropdown-item modules module_combo_title" href="#" data-value="combo" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Микс формулы</a>
+                        <a class="dropdown-item modules module_random_title" href="#" data-value="random" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true"data-original-title="" title="">Все формулы</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a tabindex="-1" class="dropdown-toggle btn btn-outline-secondary" data-toggle="dropdown" href="#" id="themes">Players <span class="players_nmb">1</span></a>
+                    <div class="dropdown-menu border-secondary text-center btn-outline-secondary2" aria-labelledby="themes">
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="1">1</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="2">2</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="3">3</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="4">4</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="5">5</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="6">6</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="7">7</a>
+                        <a class="dropdown-item navbar_screens_nmb" href="#" data-value="8">8</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Знаков <span class="digits_nmb_display">1</span> </a>
+                    <div class="dropdown-menu border-success text-center btn-outline-success">
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="1">1</a>
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="2">2</a>
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="3">3</a>
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="4">4</a>
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="5">5</a>
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="6">6</a>
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="7">7</a>
+                        <a class="dropdown-item navbar_digits_nmb" href="#" data-value="8">8</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">D <span class="actions_nmb_display">5</span>
+                    </a>
+                    <div class="dropdown-menu border-info text-center btn-outline-info">
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="2">2</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="3">3</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="4">4</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="5">5</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="7">7</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="10">10</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="15">15</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="17">17</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="20">20</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="25">25</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="30">30</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="40">40</a>
+                        <a class="dropdown-item navbar_actions_nmb" href="#" data-value="50">50</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Скорость: <span class="interval_display">1</span> </a>
+                    <div class="dropdown-menu border-danger text-center btn-outline-danger">
+                        <a class="dropdown-item navbar_interval" href="#" data-value="0.1">0.1 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="0.2">0.2 сек</a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="0.3">0.3 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="0.4">0.4 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="0.5">0.5 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="0.7">0.7 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="1">1 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="1.2">1.2 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="1.5">1.5 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="1.8">1.8 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="2">2 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="2.5">2.5 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="3">3 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="3.5">3.5 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="4">4 сек </a>
+                        <a class="dropdown-item navbar_interval" href="#" data-value="5">5 сек </a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Опции <span class="mode_display"></span> </a>
+                    <div class="dropdown-menu border-warning btn-outline-warning noclose">
+                        <a class="dropdown-item btn_double_sign_mode" href="#"><i class="fa fa-check d-none"></i> Режим двойных знаков
+                        </a>
+                        <a class="dropdown-item btn_competition_mode" href="#"><i class="fa fa-check d-none"></i> Режим олимпиады
+                        </a>
+                        <a class="dropdown-item btn_voice" href="#"><i class="fa fa-check"></i> Озвучка чисел
+                        </a>
+                        <a class="dropdown-item btn_show_numbers" href="#"><i class="fa fa-check"></i> Показ чисел</a>
+                        <a class="dropdown-item btn_voice_comment" href="#"><i class="fa fa-check"></i> Комментарии к ответам</a>
+                        <a class="dropdown-item btn_show_true_false" href="#"><i class="fa fa-check"></i> Показ результата</a>
+                        <a class="dropdown-item btn_show_example_number" href="#"><i class="fa fa-check d-none"></i> Показ номера задания</a>
+                        <a class="dropdown-item" href="#" onclick="change_bg()">Поменять фон</a>
+                        <a class="dropdown-item show_block" data-block_type="main_block" href="#"> Показать главные окна</a>
+                        <a class="dropdown-item show_block" data-block_type="settings_block" href="#"> Показать окна настроек</a>
+                        <a class="dropdown-item btn_img_mode" href="#"><i class="fa fa-check d-none"></i> Режим сценария IMG
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-pause nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Автомат: </a>
+                        <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control noclose">
+                            <div class="dropdown-items">Автоматические изменения<br /> в случае правильного решения примера</div>
+                                
+                            <div class="auto_left">
+                                <div class="dropleft">Паузы</div>   
+                                <div class="auto_right">
+                                    <div class="btn-group inc-dec-control">
+                                        
+                                        <label class="btn btn-nrm-2 btn-info input_decrease">  &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-info p-0">
+                                            <input type="number" name="progress_impulses_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="auto_left">
+                                <div class="dropleft">Знаков</div>
+                                <div class="auto_right">
+                                    <div class="btn-group inc-dec-control">  
+                                        <label class="btn btn-nrm-2 btn-success input_decrease"> &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-success p-0">
+                                            <input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary pull-right" id="modal_settings_confirm">Применить</button>
+                            </div>
+                        </div>
+                </li>
+
+            </ul>
         </div>
     </nav>
     <script>
@@ -1006,6 +1046,8 @@
                 }
             })
         </script>
+
+    <!-- modal comment-->
     <div class="modal screen" id="modal_global_settings" style="z-index: 2000; display: none;" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document" style="max-width: 660px;">
             <div class="bg_8 modal-content" style=" position: absolute; height: 100%; width: 100%; z-index: 99"></div>
@@ -1429,13 +1471,13 @@
     <input type="hidden" id="trans_multiply" value="Умножение">
     <input type="hidden" id="trans_divide" value="Деление">
     <input type="hidden" id="is_ready" value="1">
-    <input type="hidden" id="url_incorrect" value="/testos/static/games_audio/new/kungfu_panda/incorrect">
-    <input type="hidden" id="url_correct" value="/testos/static/games_audio/new/kungfu_panda/correct">
-    <input type="hidden" id="url_present" value="/testos/static/audio/audio_for_menar_games/present">
-    <input type="hidden" id="url_sounds" value="/testos/static/games_audio/new/sounds">
-    <input type="hidden" id="url_voice" value="/testos/static/games_audio/voice/russian/female_2">
-    <input type="hidden" id="url_voice_new" value="/testos/static/games_audio/voice/russian/female_3">
-    <input type="hidden" id="url_voice_none_sign" value="/testos/static/games_audio/voice/russian/none_sign/female">
+    <input type="hidden" id="url_incorrect" value="static/games_audio/new/kungfu_panda/incorrect">
+    <input type="hidden" id="url_correct" value="static/games_audio/new/kungfu_panda/correct">
+    <input type="hidden" id="url_present" value="static/audio/audio_for_menar_games/present">
+    <input type="hidden" id="url_sounds" value="static/games_audio/new/sounds">
+    <input type="hidden" id="url_voice" value="static/games_audio/voice/russian/female_2">
+    <input type="hidden" id="url_voice_new" value="static/games_audio/voice/russian/female_3">
+    <input type="hidden" id="url_voice_none_sign" value="static/games_audio/voice/russian/none_sign/female">
     <input type="hidden" id="trans_simple" value="Простой счет">
     <input type="hidden" id="trans_brother" value="Помощь брата">
     <input type="hidden" id="trans_friend" value="Помощь друга">
@@ -1644,10 +1686,10 @@
         }
     })
 </script>
-    <div id="main_screen" class="container-fluid card border-warning" style="background-image: url(&quot;/testos/static/img/backgrounds/bg_25.jpg&quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;" data-screen_title_msg="Введите имя игрока. Больше 3-х и меньше 12 символов" data-type="class">
+    <div id="main_screen" class="container-fluid card border-warning" style="background-image: url(&quot;static/img/backgrounds/bg_25.jpg&quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;" data-screen_title_msg="Введите имя игрока. Больше 3-х и меньше 12 символов" data-type="class">
         <div class="row">
             <div class="screen container-fluid card text-center padding-left-right-0 padding-top-bottom-0 4bg_1  " id="1" style="border: 1px dotted grey; background-color:inherit"> <input type="hidden" class="block_type" value="main_block">
-                <form class="padding-left-right-0" style="margin:0;">
+               <!--  <form class="padding-left-right-0" style="margin:0;">
                     <div class="bg_color bg_color_1" style="height:100vh; width:100%; position:absolute; "></div> <input type="hidden" class="active_block" value="choice_block">
                     <div class="btn-group block_header">
                         <div class="btn-group change_value" data-value-type="actions_nmb"> <button tabindex="-1" type="button" class="decrease btn-nrm btn btn-lg btn-info">&lt;</button> <button tabindex="-1" type="button" class="btn-nrm btn btn-lg btn-info padding-left-right-0" style="width: 40px"> <span class="actions_nmb_display">5</span> д</button> <button tabindex="-1" type="button" class="increase btn-nrm btn btn-lg btn-info">&gt;</button> </div> <a tabindex="-1" class="btn btn-nrm btn-lg btn-warning player_name_title"><span class="player_name_points6"> <input tabindex="-1" class="player_name text-center" style="max-width: 70px; border: none; background: inherit;" value="Игрок0"> (<span class="player_points">0</span>)</span></a>
@@ -1657,7 +1699,29 @@
                         <div class="row justify-content-center col-12">
                             <div data-block_type="main_block" class="block col row align-items-center justify-content-center col-12">
                                 <div class="col left_hero left_hero_3" style=" height: 80vh; "></div>
-                                <div class="col btn-group-vertical btn_group_main"> <a href="#" class="btn_start btn btn-lg btn-nrm btn-success margin-bottom-5"><i class="fa fa-play"> </i> Старт</a> <a href="#" class="btn_continue hidden btn btn-lg btn-nrm btn-success margin-bottom-5"><i class="fa fa-play"> </i> Продолжить</a> <a href="#" class="btn_next hidden btn btn-lg btn-nrm btn-success margin-bottom-5"><i class="fa fa-forward"> </i> Следующий</a> <a href="#" class="btn_stop hidden btn btn-lg btn-nrm btn-danger margin-bottom-5"><i class="fa fa-stop"> </i> Стоп</a> <a href="#" class="btn_restart hidden btn btn-lg btn-nrm btn-secondary margin-bottom-5"><i class="fa fa-refresh"> </i> Заново</a> <a href="#" class="btn_show_example show_block hidden btn btn-lg btn-nrm btn-purple margin-bottom-5" data-block_type="problem_show_block"><i class="fa fa-eye"> </i> Задание</a> <a href="#" class="btn_show_settings show_block btn btn-lg btn-nrm btn-warning" data-block_type="settings_block"><i class="fa fa-wrench"> </i> Настроить</a> </div>
+                                <div class="col btn-group-vertical btn_group_main"> 
+                                    <a href="#" class="btn_start btn btn-lg btn-nrm btn-success margin-bottom-5">
+                                        <img src="img/btn--arrow.png" alt=""> Старт
+                                    </a> 
+                                    <a href="#" class="btn_continue hidden btn btn-lg btn-nrm btn-success margin-bottom-5">
+                                        <img src="img/btn--arrow.png" alt=""> Продолжить
+                                    </a> 
+                                    <a href="#" class="btn_next hidden btn btn-lg btn-nrm btn-success margin-bottom-5">
+                                        <i class="fa fa-forward"> </i> Следующий
+                                    </a> 
+                                    <a href="#" class="btn_stop hidden btn btn-lg btn-nrm btn-danger margin-bottom-5">
+                                        <i class="fa fa-stop"> </i> Стоп
+                                    </a> 
+                                    <a href="#" class="btn_restart hidden btn btn-lg btn-nrm btn-secondary margin-bottom-5">
+                                        <i class="fa fa-refresh"> </i> Заново
+                                    </a> 
+                                    <a href="#" class="btn_show_example show_block hidden btn btn-lg btn-nrm btn-purple margin-bottom-5" data-block_type="problem_show_block">
+                                        <i class="fa fa-eye"> </i> Задание
+                                    </a> 
+                                    <a href="#" class="btn_show_settings show_block btn btn-lg btn-nrm btn-warning" data-block_type="settings_block">
+                                        <i class="fa fa-wrench"> </i> Настроить
+                                    </a> 
+                                </div>
                                 <div class="col right_hero right_hero_4" style=" height: 80vh;"></div>
                             </div> <input data-block_type="countdown_block" type="text" class="block col hidden text-center " readonly="" style="background-color: inherit; border: none; width:100%; height: 80vh; font-size: 16vw" value="">
                             <div data-block_type="problem_block" class="block col hidden row align-items-center justify-content-center"> <input class="text-center col-12 w-100 fonted" type="text" readonly="" tabindex="-1" value="" style="color: black; background-color: inherit; border: none; width:100%; height: 73vh ; font-size: 70vh;">
@@ -1748,11 +1812,11 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
-    <script src="/testos/static/games_static/js/howler.js"></script>
+    <script src="static/games_static/js/howler.js"></script>
     <script>
     var GLOBAL_STATE = {
         "status": "stopped",
@@ -1818,7 +1882,7 @@
     function change_bg() {
         random_number = random_between(1, 80);
         var image_fon = "bg_" + random_number + ".jpg";
-        image_url = '/testos/static/img/backgrounds/' + image_fon;
+        image_url = 'static/img/backgrounds/' + image_fon;
         $('#main_screen').css('background-image', 'url(' + image_url + ')');
     }
 
@@ -1833,7 +1897,7 @@
                     sound_click(sound);
                 } else {
                     soundHowl = new Howl({
-                        src: [`/testos/static/games_audio/new/sounds/${sound}.mp3`],
+                        src: [`static/games_audio/new/sounds/${sound}.mp3`],
                     });
                     soundHowl.play();
                 }
@@ -1843,7 +1907,7 @@
             case 'error':
             case 'success':
                 soundHowl = new Howl({
-                    src: [`/testos/static/games_audio/new/sounds/${sound}.mp3`],
+                    src: [`static/games_audio/new/sounds/${sound}.mp3`],
                 });
                 soundHowl.play();
                 break;
@@ -1856,7 +1920,7 @@
                 number = parseInt(sound);
                 absNumber = Math.abs(number);
 
-                voiceUrl = '/testos/static/games_audio/new/numbers/ru2/';
+                voiceUrl = 'static/games_audio/new/numbers/ru2/';
                 if (newVoice) {
 
                     sound_interval = 270;
@@ -1971,7 +2035,7 @@
                     }
                 } else {
                     soundHowl = new Howl({
-                        src: [`/testos/static/games_audio/new/numbers/ru3/${filename}.mp3`],
+                        src: [`static/games_audio/new/numbers/ru3/${filename}.mp3`],
                     });
                     soundHowl.play();
                 }
@@ -4604,13 +4668,13 @@
             <div data-block_type="main_block" class="block col row align-items-center justify-content-center col-12" >\
             <div class="col left_hero left_hero_' + left_hero_index + '" style=" height: ' + screen_parameters.screen_height + '; "></div>\
             <div class="col btn-group-vertical btn_group_main">\
-            <a href="#" class="btn_start btn btn-lg btn-nrm btn-success margin-bottom-5" ><i class="fa fa-play"> </i>  Старт</a>\
-            <a href="#" class="btn_continue hidden btn btn-lg btn-nrm btn-success margin-bottom-5" ><i class="fa fa-play"> </i>  Продолжить</a>\
-            <a href="#" class="btn_next hidden btn btn-lg btn-nrm btn-success margin-bottom-5" ><i class="fa fa-forward"> </i>  Следующий</a>\
+            <a href="#" class="btn_start btn btn-lg btn-nrm btn-success margin-bottom-5" ><img src="img/btn--arrow.png" alt="" /> Старт</a>\
+            <a href="#" class="btn_continue hidden btn btn-lg btn-nrm btn-success margin-bottom-5" ><img src="img/btn--arrow.png" alt="" /> Продолжить</a>\
+            <a href="#" class="btn_next hidden btn btn-lg btn-nrm btn-success margin-bottom-5" ><img src="img/btn--arrow.png" alt="" /> </i>  Следующие</a>\
             <a href="#" class="btn_stop hidden btn btn-lg btn-nrm btn-danger margin-bottom-5" ><i class="fa fa-stop"> </i>  Стоп</a>\
-            <a href="#" class="btn_restart hidden btn btn-lg btn-nrm btn-secondary margin-bottom-5" ><i class="fa fa-refresh"> </i>  Заново</a>\
+            <a href="#" class="btn_restart hidden btn btn-lg btn-nrm btn-secondary margin-bottom-5" ><img src="img/btn--again.png" alt="" />  Заново</a>\
             <a href="#" class="btn_show_example show_block hidden btn btn-lg btn-nrm btn-purple margin-bottom-5" data-block_type="problem_show_block"><i class="fa fa-eye"> </i>  Задание</a>\
-            <a href="#" class="btn_show_settings show_block btn btn-lg btn-nrm btn-warning " data-block_type="settings_block" ><i class="fa fa-wrench"> </i>  Настроить</a>\
+            <a href="#" class="btn_show_settings show_block btn btn-lg btn-nrm" data-block_type="settings_block" > <img src="img/btn--setting.png" alt="" />  Настроить</a>\
             </div>\
             <div class="col right_hero right_hero_' + right_hero_index + '" style=" height: ' + screen_parameters.screen_height + ';"></div>\
             </div>\
@@ -4620,7 +4684,7 @@
             <input class="text-center col-12 w-100 fonted"  type="text" readonly tabindex="-1" value="" \
             style="color: black; background-color: inherit; border: none; width:100%; height: ' + screen_parameters.problem_block_height + ' ; font-size: ' + screen_parameters.problem_block_fontsize + ';">\
             <div class="row justify-content-center"> \
-            <button tabindex="-1" type="button" class="btn_pause show_block btn btn-lg btn-nrm btn-success " data-block_type="main_block"><i class="fa fa-pause"></i> Пауза</button> \
+            <button tabindex="-1" type="button" class="btn_pause show_block btn btn-lg btn-nrm btn-success " data-block_type="main_block"> Пауза <img src="img/btn--pause.png" alt="" /></button> \
             </div>\
             </div>\
             <div data-block_type="answer_input_block" class="block col hidden row align-items-center justify-content-center" >\
@@ -4873,50 +4937,45 @@
 
                 var left_hero_index = random_between(1, 5);
                 $$answer_input_block_with_keyboard =
-                    '<div class="d-none d-lg-block ' + hero_class + ' left_hero_' + left_hero_index + '" style="height: 80vh;"></div>\
-                    <div class="col row justify-content-center align-items-center">\
-                    <p class="col-sm-10 d-none d-md-block">Введи свой ответ</p>\
-                    <div class="progress timer_block " style="width: 80%; height: 2vh; padding: 0; border: none; margin-bottom: 2px">\
-                    <div class="timer_bar progress-bar progress-bar-striped bg-danger progress-bar-animated color-black"\
-                    style="width: 100%; ">\
-                    <span style="position: absolute; left: 30%; font-weight: 100;" ></span>\
+                    '\
+                    <div class="calculation__wrap keyboard row justify-content-center">\
+                        <p class="d-none d-md-block calculation__title">Введи свой ответ</p>\
+                        <div class="calculation__wrap-input col-sm-6 ">\
+                            <input type="text" class="calculation__input form-control text-center border-info answer_input">\
+                        </div>\
                     </div>\
-                    </div>\
-                    <input type="text" class="form-control text-center border-info col-sm-10 answer_input"\
-                    style=" height: ' + answer_input_height + ' ; font-size: ' + answer_input_fontsize + '" >\
-                    <div class="keyboard row justify-content-center">\
+                    <div class="keyboard row justify-content-center calculation__wrap-btn">\
                     <div class="col-sm-12">\
                     <div class="col-sm-12 ' + btn_keyboard_group_class + '">\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="1">1</button>\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="2">2</button>\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="3">3</button>\
+                    <button tabindex="-1" type="button" class="btn btn-lg btn-success btn-keyboard btn_start btn--calculation"><i class="fa fa-play"></i> </button>\
                     </div>\
                     <div class="col-sm-12 ' + btn_keyboard_group_class + '">\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="4">4</button>\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="5">5</button>\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="6">6</button>\
+                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard btn--calculation" data-value="minus"><i class="fa fa-minus"></i></button>\
                     </div>\
                     <div class="col-sm-12 ' + btn_keyboard_group_class + '">\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="7">7</button>\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="8">8</button>\
                     <button tabindex="-1" type="button" class="btn  btn-secondary btn-keyboard" data-value="9">9</button>\
+                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard btn--calculation" data-value="clear"><i class="fa fa-times"></i></button>\
                     </div>\
                     <div class="col-sm-12 ' + btn_keyboard_group_class + '">\
-                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard" data-value="clear"><i class="fa fa-times"></i></button>\
+                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard btn--opasity" data-value="backspace"></button>\
                     <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard" data-value="0">0</button>\
-                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard" data-value="backspace"> <i class="fa fa-long-arrow-left"></i> </button>\
-                    </div>\
-                    <div class="col-sm-12 ' + btn_keyboard_group_class + '">\
-                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard" data-value="minus"><i class="fa fa-minus"></i></button>\
-                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard" data-value=".">.</button>\
-                    <button tabindex="-1" type="button" class="btn btn-lg btn-success btn-keyboard btn_start"><i class="fa fa-play"></i> </button>\
+                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard btn--opasity" data-value="backspace"></button>\
+                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard btn--calculation" data-value=".">.</button>\
                     </div>\
                     </div>\
                     <div class="row col-sm-12 justify-content-center">\
                     <button tabindex="-1" type="button" class="show_block btn btn-lg btn-nrm btn-purple" data-block_type="main_block"><i class="fa fa-bars"></i> Меню</button>\
                     <button tabindex="-1" type="button" class="btn  btn-nrm btn-lg btn-info btn_check_answer"><i class="fa fa-question"></i> Проверить</button>\
                     </div>\
-                    </div>';
+                    ';
 
 
                 $("#" + i).find(".block[data-block_type='answer_input_block']").html($$answer_input_block_with_keyboard)
@@ -6880,7 +6939,7 @@
             success: function(data) {
                 if (data.res === true) {
                     script = document.createElement('script');
-                    script.src = "/testos/static/games_static/js/meg_22.min.js";
+                    script.src = "static/games_static/js/meg_22.min.js";
                     document.body.appendChild(script);
                 }
             }
@@ -7091,8 +7150,8 @@
         }
 
         var loadedNumbersNmb = 0;
-        voiceUrl = '/testos/static/games_audio/new/numbers/ru2/';
-        oldVoiceUrl = '/testos/static/games_audio/voice/russian/female_3/';
+        voiceUrl = 'static/games_audio/new/numbers/ru2/';
+        oldVoiceUrl = 'static/games_audio/voice/russian/female_3/';
         var soundHowl;
         for (var number of numbers) {
             number = Math.abs(number);
@@ -8821,7 +8880,7 @@
         $('[data-toggle="popover"]').popover()
     }
     </script>
-    <script src="/testos/static/games_static/js/meg_22.min.js"></script>
+    <script src="static/games_static/js/meg_22.min.js"></script>
 </body>
 
 </html>
