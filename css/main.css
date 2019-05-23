@@ -11,6 +11,10 @@ h1,
 h2,
 h3,
 h4,
+label,
+body .neucha,
+option,
+select,
 div {
     font-family: 'Montserrat', sans-serif !important;
 }
@@ -882,10 +886,13 @@ input::-webkit-inner-spin-button {
     border-radius: 50% !important;
     background: #e6e6e6 !important;
     border: none !important;
+    width: 35px !important;
+    height: 35px !important;
 }
 
 .show .btn--close span {
     font-size: 20px;
+    line-height: 1 !important;
 }
 
 .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active, .show>.btn-outline-info.dropdown-toggle {
@@ -1128,6 +1135,25 @@ input::-webkit-inner-spin-button {
     height: auto !important;
 }
 
+.modal--page2 {
+    margin-top: 0 !important;
+    padding: 15px 0 !important;
+}
+
+.modal--page2 label, h4{
+    text-align: left;
+    font-size: 16px;
+}
+
+.btn--repdigit .active {
+    background: #fff !important;
+    color: #41becd !important;
+}
+
+.btn--repdigit button:hover {
+    background: #fff !important;
+    color: #41becd !important;
+}
 
 /*-------------------------------media-------------------------------------------*/
 @media only screen and (max-width : 1200px) {

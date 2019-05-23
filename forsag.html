@@ -1053,7 +1053,7 @@
             <div class="bg_8 modal-content" style=" position: absolute; height: 100%; width: 100%; z-index: 99"></div>
             <div class="modal-content border-primary" style=" z-index: 100">
                 <div class="modal-header border-info ">
-                    <h5 class="modal-title neucha">Настройки</h5>
+                    <h5 class="modal-title neucha">Опции</h5>
                     <script>
                         $(document).ready(function () {
                              $('#btn_example_number').on('click', function () {
@@ -1063,8 +1063,8 @@
                              })
                          })
                      </script>
-                    <a href="/teachers/settings_page/" class="btn btn-nrm-2 btn-success"> Изменить методику озвучки </a>
-                    <button type="button" class="btn btn-nrm-2 btn-danger" data-dismiss="modal" aria-label="Close">
+<!--                     <a href="/teachers/settings_page/" class="btn btn-nrm-2 btn-success"> Изменить методику озвучки </a>
+ -->                    <button type="button" class="btn btn-nrm-2 btn-danger btn--close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -1072,8 +1072,8 @@
                     <input type="hidden" class="examples_nmb-input" name="examples_nmb" value="0">
                     <div class="modal-body border-warning">
                         <div class="container-fluid">
-                            <div class="row homework   hidden ">
-                                <div class="col-6">
+                            <div class="row homework hidden">
+                                <div class="col-6 ">
                                     <div class="card-body text-center">
                                         <h5 class="neucha">Прогресс выполнения </h5>
                                         <div id="progress_text">
@@ -1099,9 +1099,9 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 settings-left">
+                                <div class="col-md-6 settings-left ">
                                     <div class="card-body text-center row justify-content-center">
-                                        <label class="h4 neucha" for="topic">Частые настройки</label>
+                                        <label class="h4 neucha" for="topic">Переходы</label>
                                         <select name="" id="topic" class="form-control text-center">
                                             <option value="0">Выберите</option>
                                             <option value="simple_mirror">1 - Зеркальные числа (Простой счет)</option>
@@ -1117,7 +1117,7 @@
                                     </div>
                                     <div class="card-body text-center row justify-content-center mt-3">
                                         <blockquote class="card-blockquote col-md-8 align-self-center">
-                                            <label for="modules" class="h4 neucha">Модуль
+                                            <label for="modules" class="h4 neucha">Цифры в
                                                 <div class="btn-group mt-2">
                                                     <div class="btn-group" role="group">
                                                         <button type="button" class="btn btn-nrm-2 btn-info dropdown-toggle modules_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:190px">Простой счет</button>
@@ -1136,7 +1136,7 @@
                                             </label>
                                         </blockquote>
                                         <div class="col-12 ">
-                                            <div class="btn-group   btn-group-toggle" data-toggle="buttons" style="margin-bottom:3px">
+                                            <div class="btn-group btn-group-toggle btn--modal2" data-toggle="buttons" style="margin-bottom:3px">
                                                 <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="1" type="checkbox" checked=""> 1 </label>
                                                 <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="2" type="checkbox" checked=""> 2 </label>
                                                 <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="3" type="checkbox" checked=""> 3 </label>
@@ -1327,11 +1327,53 @@
                                         </label>
                                     </div>
                                 </div>
+
+                                <!-- modal setings 
+
+                                <div class="col-md-12 settings-left modal--page2">
+                                    <div class="card-body text-center row mt-3">
+                                        <label for="modules" class="col-md-4  h4 neucha">Цифры в формулах</label>
+                                        <div class="col-md-8">
+                                            <div class="btn-group  btn-group-toggle" data-toggle="buttons" style="margin-bottom:3px">
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="1" type="checkbox" checked=""> 1 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="2" type="checkbox" checked=""> 2 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="3" type="checkbox" checked=""> 3 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="4" type="checkbox" checked=""> 4 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="5" type="checkbox" checked=""> 5 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="6" type="checkbox" checked=""> 6 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="7" type="checkbox" checked=""> 7 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="8" type="checkbox" checked=""> 8 </label>
+                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="9" type="checkbox" checked=""> 9 </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body text-center row">
+                                        <label class="col-md-4 h4 neucha" for="topic">Переходы</label>
+                                        <div class="col-md-8 ">
+                                            <select name="" id="topic" class="form-control text-center">
+                                                <option value="0">Выберите</option>
+                                                <option value="simple_mirror">1 - Зеркальные числа (Простой счет)</option>
+                                                <option value="brother_mirror">1.1 - Зеркальные числа (Помощь брата)</option>
+                                                <option value="train_mode_50">5 - Тренировка переходов через 50</option>
+                                                <option value="train_mode_100">6 - Тренировка переходов через 100</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="card-body text-center row">
+                                        <h4 class="neucha col-md-4">Repdigit</h4>
+                                        <div class="btn-group col-md-8 btn--repdigit">
+                                            <button type="button" class="btn btn-nrm-2 btn-outline-warning discharge_mode btn_discharge_mode_mirror" data-value="mirror" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="" > 
+                                                <input type="hidden" name="discharge_mode" value="all">Зер 
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
                             </div>
                         </div>
                         <div class="modal-footer border-info">
-                            <button type="button" class="btn btn-nrm-2 btn-info" data-dismiss="modal">Закрыть</button>
-                            <button type="button" class="btn btn-nrm-2 btn-success" data-dismiss="modal" id="save_settings">Применить</button>
+<!--                             <button type="button" class="btn btn-nrm-2 btn-info" data-dismiss="modal">Закрыть</button>
+ -->                            <button type="button" class="btn btn-nrm-2 btn-success" data-dismiss="modal" id="save_settings">Применить</button>
                         </div>
                     </div>
                 </form>
