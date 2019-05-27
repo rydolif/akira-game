@@ -715,7 +715,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Опции <span class="mode_display"></span> </a>
+                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Настройки <span class="mode_display"></span> </a>
                     <div class="dropdown-menu border-warning btn-outline-warning noclose">
                         <a class="dropdown-item btn_double_sign_mode" href="#"><i class="fa fa-check d-none"></i> Режим двойных знаков
                         </a>
@@ -735,6 +735,10 @@
                     </div>
                 </li>
 
+                <li class="nav-pause nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-original-title="" title="">Опции</a>
+                </li>
+<!--                 
                 <li class="nav-pause nav-item dropdown">
                     <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Автомат: </a>
                         <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control noclose">
@@ -771,7 +775,7 @@
                             </div>
                         </div>
                 </li>
-
+ -->
             </ul>
         </nav>
 
@@ -860,7 +864,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Опции <span class="mode_display"></span> </a>
+                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Настройки <span class="mode_display"></span> </a>
                     <div class="dropdown-menu border-warning btn-outline-warning noclose">
                         <a class="dropdown-item btn_double_sign_mode" href="#"><i class="fa fa-check d-none"></i> Режим двойных знаков
                         </a>
@@ -880,6 +884,10 @@
                     </div>
                 </li>
 
+                <li class="nav-pause nav-item dropdown">
+                    <a tabindex="-1" href="#" class="btn btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-original-title="" title="">Опции</a>
+                </li>
+<!-- 
                 <li class="nav-pause nav-item dropdown">
                     <a tabindex="-1" href="#" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Автомат: </a>
                         <div class="dropdown-menu border-info text-center btn-outline-info inc-dec-control noclose">
@@ -915,7 +923,7 @@
                                 <button type="button" class="btn btn-primary pull-right" id="modal_settings_confirm">Применить</button>
                             </div>
                         </div>
-                </li>
+                </li> -->
 
             </ul>
         </div>
@@ -1049,11 +1057,11 @@
 
     <!-- modal comment-->
     <div class="modal screen" id="modal_global_settings" style="z-index: 2000; display: none;" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document" style="max-width: 660px;">
+        <div class="modal-dialog modal-lg" role="document" style="max-width: 800px;">
             <div class="bg_8 modal-content" style=" position: absolute; height: 100%; width: 100%; z-index: 99"></div>
             <div class="modal-content border-primary" style=" z-index: 100">
                 <div class="modal-header border-info ">
-                    <h5 class="modal-title neucha">Опции</h5>
+                    <h5 class="modal-title neucha"> <img src="img/option.png" alt="">Опции</h5>
                     <script>
                         $(document).ready(function () {
                              $('#btn_example_number').on('click', function () {
@@ -1098,282 +1106,221 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 settings-left ">
-                                    <div class="card-body text-center row justify-content-center">
-                                        <label class="h4 neucha" for="topic">Переходы</label>
-                                        <select name="" id="topic" class="form-control text-center">
-                                            <option value="0">Выберите</option>
-                                            <option value="simple_mirror">1 - Зеркальные числа (Простой счет)</option>
-                                            <option value="brother_mirror">1.1 - Зеркальные числа (Помощь брата)</option>
-                                            <option value="simple_brother">2 - Помощь брата, а на старшем разряде - простой счет</option>
-                                            <option value="friend_less_100">3 - Помощь друга - оставаться внутри 100 (без переходов)</option>
-                                            <option value="combo_less_100">4 - Комьинированный счет - оставаться внутри 100 (без переходов)</option>
-                                            <option value="train_mode_50">5 - Тренировка переходов через 50</option>
-                                            <option value="train_mode_100">6 - Тренировка переходов через 100</option>
-                                            <option value="train_sign">7 - Тренировка отрицательных чисел</option>
-                                            <option value="random">8 - Все темы</option>
-                                        </select>
-                                    </div>
-                                    <div class="card-body text-center row justify-content-center mt-3">
-                                        <blockquote class="card-blockquote col-md-8 align-self-center">
-                                            <label for="modules" class="h4 neucha">Цифры в
-                                                <div class="btn-group mt-2">
-                                                    <div class="btn-group" role="group">
-                                                        <button type="button" class="btn btn-nrm-2 btn-info dropdown-toggle modules_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:190px">Простой счет</button>
-                                                        <div class="dropdown-menu dropdown-menu-middle">
-                                                            <input type="hidden" name="modules" value="simple">
-                                                            <a class="dropdown-item modules module_simple_title bg-info" href="#" data-value="simple">Простой счет</a>
-                                                            <a class="dropdown-item modules module_brother_title" href="#" data-value="brother" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="+1 = +5 - 4       -1 = -5 + 4  <br> +2 = +5 - 3       -2 = -5 + 3<br> +3 = +5 - 2       -3 = -5 + 2 <br> +4 = +5 - 1       -4 = -5 + 1" data-original-title="Формулы 5-ки">Помощь брата</a>
-                                                            <a class="dropdown-item modules module_friend_title" href="#" data-value="friend" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="+1 = +10 - 9       -1 = -10 + 9  <br>  +2 = +10 - 8       -2 = -10 + 8 <br> +3 = +10 - 7       -3 = -10 + 7 <br> +4 = +10 - 6       -4 = -10 + 6<br> +5 = +10 - 5       -5 = -10 + 5<br> +6 = +10 - 4       -6 = -10 + 4<br> +7 = +10 - 3       -7 = -10 + 3<br> +8 = +10 - 2       -8 = -10 + 2<br> +9 = +10 - 1       -9 = -10 + 1" data-original-title="Формулы 10-ки">Помощь друга</a>
-                                                            <a class="dropdown-item modules module_friend_brother_title" href="#" data-value="friend,brother_fr" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="+1 = +10 - 9       -1 = -10 + 9  <br>  +2 = +10 - 8       -2 = -10 + 8 <br> +3 = +10 - 7       -3 = -10 + 7 <br> +4 = +10 - 6       -4 = -10 + 6<br> +5 = +10 - 5       -5 = -10 + 5<br> +6 = +10 - 4       -6 = -10 + 4<br> +7 = +10 - 3       -7 = -10 + 3<br> +8 = +10 - 2       -8 = -10 + 2<br> +9 = +10 - 1       -9 = -10 + 1" data-original-title="Формулы 5-ки и 10-ки">Помощь друга и брата</a>
-                                                            <a class="dropdown-item modules module_combo_title" href="#" data-value="combo" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content=" <p> +6 = +11 - 5       -6 = -11 + 5  <br> +6 = +10 - 5 + 1     -6 = -10 + 5 - 1</p> <p> +7 = +12 - 5       -7 = -12 + 5<br> +7 = +10 - 5 + 2      -7 = -10 + 5 - 2</p> <p> +8 = +13 - 5       -8 = -13 + 5 <br> +8 = +10 - 5 + 3     -8 = -10 + 5 -3 </p> <p> +9 = +14 - 5       -9 = -14 + 5 <br> +9 = +10 - 5 + 4     -9 = -10 + 5 - 4" data-original-title="Формулы комбинированного счета 10-ки и 5-ки">Комбинированный счет</a>
-                                                            <a class="dropdown-item modules module_random_title" href="#" data-value="random" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" data-content="Генерируются случайные числа. <br>  В настройках ниже можно включить генерацию и отрицательных чисел: Кнопка ЗНАК" data-original-title="" title="">Произвольный</a>
-                                                        </div>
-                                                    </div>
-                                                    <button type="button" class="btn btn-nrm-2 btn-outline-info active check_all"><input type="hidden" value="1"> ✔ </button>
-                                                </div>
-                                            </label>
-                                        </blockquote>
-                                        <div class="col-12 ">
-                                            <div class="btn-group btn-group-toggle btn--modal2" data-toggle="buttons" style="margin-bottom:3px">
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="1" type="checkbox" checked=""> 1 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="2" type="checkbox" checked=""> 2 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="3" type="checkbox" checked=""> 3 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="4" type="checkbox" checked=""> 4 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="5" type="checkbox" checked=""> 5 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="6" type="checkbox" checked=""> 6 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="7" type="checkbox" checked=""> 7 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="8" type="checkbox" checked=""> 8 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="9" type="checkbox" checked=""> 9 </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h4 class="neucha">Операции</h4>
-                                        <div class="btn-group  ">
-                                            <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-nrm-2 btn-success dropdown-toggle operation_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Слож-е/Выч-е</button>
-                                                <input type="hidden" name="operation" value="plus_minus">
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item operation" data-value="plus" href="#">Сложение</a>
-                                                    <a class="dropdown-item operation" data-value="minus" href="#">Вычитание</a>
-                                                    <a class="dropdown-item operation bg-success" data-value="plus_minus" href="#">Сложение/Вычитание</a>
-                                                    <div class="dropdown-divider just_operation disabled"></div>
-                                                    <a class="dropdown-item operation just_operation disabled" data-value="just_plus" href="#">Только сложение</a>
-                                                    <a class="dropdown-item operation just_operation disabled" data-value="just_minus" href="#">Только вычитание</a>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn btn-nrm-2 btn-outline-success operation_alternation" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="" data-content="При генерации примеров чередоваться операции только сложение и сложение-вычитание" data-original-title="Режим чередования операций">
-                                                <input type="hidden" name="operation_alternation" value="off">+/-
-                                            </button>
-                                            <div class="btn-group" role="group">
-                                                <button type="button" class="decimal_display btn btn-nrm-2 btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Дробь</button>
-                                                <input type="hidden" name="decimal" value="off">
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item decimal text-danger bg-success" data-value="off" href="#">Выключить</a>
-                                                    <a class="dropdown-item decimal" data-value="1_digit" href="#">1 знак после запятой</a>
-                                                    <a class="dropdown-item decimal" data-value="2_digit" href="#">2 знака после запятой</a>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group " role="group">
-                                                <button type="button" class="btn btn-nrm-2 btn-outline-success sign_display btn_dropdown_sign disabled dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Знак</button>
-                                                <input type="hidden" name="sign" value="off">
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item sign bg-success" data-value="off" href="#">Исключить отрицательные числа</a>
-                                                    <a class="dropdown-item sign" data-value="on" href="#">Включить отрицательные числа</a>
-                                                    <a class="dropdown-item sign" data-value="training" href="#">Тренировка отрицательных чисел</a>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn btn-nrm-2 btn-outline-success is_alternation" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="" data-content="При генерации примеров чередоваться слагаемые с количеством цифр меньше на 1 (например 34 + 3 + 98 + 2)" data-original-title="Режим чередования"><input type="hidden" name="is_alternation" value="off">1/2 </button>
-                                        </div>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h4 class="neucha">Дополнительные настройки</h4>
-                                        <div class="btn-group  ">
-                                            <div class="btn-group dropup" role="group">
-                                                <button type="button" class="btn btn-nrm-2 btn-outline-warning dropdown-toggle btn_dropdown_50 mode_50_display disabled active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">✓ 50+</button>
-                                                <input type="hidden" name="mode_50" value="on">
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item mode_50 text-danger" data-value="off" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="" data-content="При генерации примеров будут ИСКЛЮЧЕНЫ переходы через 50 (типа 49+4)" data-original-title="Режим выключенного перехода через 50">Выключить 50+</a>
-                                                    <a class="dropdown-item mode_50 bg-warning" data-value="on" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При генерации примеров БУДУТ примеры на переходы через 50 (типа 49+4)" data-original-title="Режим включенного перехода через 50">Включить 50+</a>
-                                                    <a class="dropdown-item mode_50" href="#" data-value="training" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Генерация примеров на переходы через 50 (типа 49+4)" data-original-title="Режим тренировки перехода через 50">Тренировка 50+</a>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group dropup" role="group">
-                                                <button type="button" class="btn btn-nrm-2 btn-outline-warning dropdown-toggle btn_dropdown_100 mode_100_display disabled active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">✓ 100+</button>
-                                                <input type="hidden" name="mode_100" value="on">
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item mode_100 text-danger" data-value="off" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="" data-content="При генерации примеров будут ИСКЛЮЧЕНЫ переходы через 100 (типа 99+4)" data-original-title="Режим выключенного перехода через 100">Выключить 100+</a>
-                                                    <a class="dropdown-item mode_100 bg-warning" data-value="on" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При генерации примеров БУДУТ переходы через 100 (типа 99+4)" data-original-title="Режим включенного перехода через 100">Включить 100+</a>
-                                                    <a class="dropdown-item mode_100" href="#" data-value="training" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Генерация примеров на переходы через 100 (типа 99+4)" data-original-title="Режим тренировки перехода через 100">Тренировка 100+</a>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn btn-nrm-2 btn-outline-warning all_discharge disabled active" data-container="body" data-toggle="popover" data-trigger="hover" data-html="true" data-placement="right" title="" data-content="При включенном режиме 'Формул на все разряды' при генерации примеров формулы (5-ки, 10-ки) будут на всех разрядах
-                                                <br> <br> При ВЫключенном режиме при генерации примеров  формулы (5-ки, 10-ки) будут на всех разрядах, КРОМЕ старшего
-                                                " data-original-title="Формулы на все разряды"> <input type="hidden" name="all_discharge" value="on">Все </button>
-                                            <button type="button" class="btn btn-nrm-2 btn-outline-warning discharge_mode btn_discharge_mode_mirror" data-value="mirror" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="" data-content="При включенном режиме будут генерироваться примеры с одинаковыми цифрами, типа: 444 + 333 - 222" data-original-title="Зеркальные числа"> <input type="hidden" name="discharge_mode" value="all">Зер </button>
-                                            <div class="btn-group dropup noclose" role="group">
-                                                <button type="button" class="btn btn-sm btn-warning dropdown-toggle btn_dropdown_additional" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="additional_display"> Раз </span></button>
-                                                <div class="dropdown-menu min-width-5rem">
-                                                    <a class="dropdown-item bg-warning discharge_mode" data-value="all" href="#" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При ВКЛЮЧЕННОМ режиме цифры, отличные от нуля будут присутствовать на всех разрядах" data-original-title="Цифры на всех разрядах">Все разряды</a>
-                                                    <a class="dropdown-item discharge_mode" href="#" data-value="1" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При ВКЛЮЧЕННОМ режиме цифры, отличные от нуля будут присутствовать на 1-м разряде" data-original-title="Цифры на 1-м разряде">1-й разряд</a>
-                                                    <a class="dropdown-item discharge_mode" href="#" data-value="2" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При ВКЛЮЧЕННОМ режиме цифры, отличные от нуля будут присутствовать на 2-м разряде" data-original-title="Цифры на 2-м разряде">2-й разряд</a>
-                                                    <a class="dropdown-item discharge_mode" href="#" data-value="3" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При ВКЛЮЧЕННОМ режиме цифры, отличные от нуля будут присутствовать на 3-м разряде" data-original-title="Цифры на 3-м разряде">3-й разряд</a>
-                                                    <a class="dropdown-item discharge_mode" href="#" data-value="4" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При ВКЛЮЧЕННОМ режиме цифры, отличные от нуля будут присутствовать на 4-м разряде" data-original-title="Цифры на 4-м разряде">4-й разряд</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 text-center">
-                                    <div class="card-body text-center">
-                                        <h4 class="neucha">Количество цифр</h4>
-                                        <div class="btn-group inc-dec-control">
-                                            <label class="btn btn-nrm-2 btn-success change_value_to_default" data-value_type="digits_nmb" data-value="1">Цифр: </label>
-                                            <label class="btn btn-nrm-2 btn-success input_decrease"> &lt; </label>
-                                            <label class="btn btn-nrm-2 btn-success p-0">
-                                                <input type="number" name="digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="1" min="1" max="12" step="1" data-decimal="0">
-                                            </label>
-                                            <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
-                                        </div>
-                                        <div class="btn-group inc-dec-control">
-                                            <label class="btn btn-nrm-2 btn-success pr-0 change_value_to_default" data-value_type="progress_digits_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="(Работает только при включенном прогрессе действий) При включенном прогрессе, количество цифр увеличится, если
-                                                <br> 1) количество действий стало больше того, что указано в прогрессе цифр,
-                                                <br> 2) было правильно отвечено подряд на 3 задания,
-                                                <br> <br> Если в новом режиме, при увеличинном количестве цифр было сделано 3 ошибки подряд, то возвращается предыдущий режим с первоначальными настройками" data-original-title="Прогресс количества цифр">Прогресс: </label>
-                                            <label class="btn btn-nrm-2 btn-success input_decrease"> &lt; </label>
-                                            <label class="btn btn-nrm-2 btn-success p-0">
-                                                <input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
-                                            </label>
-                                            <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
-                                        </div>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h4 class="neucha">Количество действий</h4>
-                                        <div class="btn-group inc-dec-control">
-                                            <label class="btn btn-nrm-2 btn-info change_value_to_default pr-0" data-value_type="actions_nmb" data-value="5">Действий:</label>
-                                            <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
-                                            <label class="btn btn-nrm-2 btn-info p-0">
-                                                <input type="number" name="actions_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="5" min="1" max="300" step="1" data-decimal="0">
-                                            </label>
-                                            <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
-                                        </div>
-                                        <div class="btn-group inc-dec-control">
-                                            <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default" data-value_type="progress_actions_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При включенном прогрессе, количество действий увеличится на 1, если
-                                                <br>  Было правильно выполнено то количество примеров, указанное в прогрессе действий
 
-                                                <br><br>  Количество действий уменьшится на 1, если
-                                                <br>  Было НЕправильно выполнено то количество примеров, указанное в прогрессе действий
-                                                <br><br> Если включен параллельно прогресс скорости, то увеличение/уменьшение количества действий будет чередоваться с увеличением/уменьшением скорости" data-original-title="Прогресс количества действий">Прогресс: </label>
-                                            <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
-                                            <label class="btn btn-nrm-2 btn-info p-0">
-                                                <input type="number" name="progress_actions_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
-                                            </label>
-                                            <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
-                                        </div>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <h4 class="neucha">Интервал</h4>
-                                        <div class="btn-group-2">
-                                            <div class="btn-group inc-dec-control">
-                                                <label class="btn btn-nrm-2 btn-danger change_value_to_default" data-value_type="interval" data-value="1" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="Интервал - это время, которое дается на выполнение одной элементарной операции:
-                                                    сложение или вычитание" data-original-title="Интервал">Интервал: </label>
-                                                <label class="btn btn-nrm-2 btn-danger input_decrease"> &lt; </label>
-                                                <label class="btn btn-nrm-2 btn-danger p-0">
-                                                    <input type="number" name="interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="1" min="0.1" max="10" step="0.1" data-decimal="1">
-                                                </label>
-                                                <label class="btn btn-danger btn-nrm-2 input_increase"> &gt; </label>
-                                            </div>
-                                            <div class="btn-group inc-dec-control">
-                                                <label class="btn btn-nrm-2 btn-danger pr-0  change_value_to_default" data-value_type="progress_interval" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" data-content="При включенном прогрессе скорости, скорость увеличится на 0.1, если
-                                                    <br>  Было правильно выполнено то количество примеров, указанное в прогрессе скорости
-                                                    <br><br>  Скорость уменьшится, если
-                                                    <br>  Было НЕправильно выполнено то количество примеров, указанное в прогрессе скорости
-                                                    <br><br> Если включен параллельно прогресс действий, то увеличение/уменьшение скорости будет чередоваться с увеличением/уменьшением количества действий" data-original-title="Прогресс количества скорости">Про: </label>
-                                                <label class="btn btn-nrm-2 btn-danger input_decrease"> &lt; </label>
-                                                <label class="btn btn-nrm-2 btn-danger p-0">
-                                                    <input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="0" min="0" max="5" step="1" data-decimal="0">
-                                                </label>
-                                                <label class="btn btn-nrm-2 btn-danger input_increase"> &gt; </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body text-center hidden-xs screens_nmb_card">
-                                        <h4 class="neucha ">Количество игроков</h4>
-                                        <div class="btn-group inc-dec-control">
-                                            <label class="btn btn-secondary change_value_to_default" data-value_type="screens_nmb" data-value="6">Игроков: </label>
-                                            <label class="btn btn-secondary input_decrease"> &lt; </label>
-                                            <label class="btn btn-secondary" style="padding: 0">
-                                                <input type="number" name="screens_nmb" class="form-control screens_nmb text-center border-secondary bg-light-secondary input_number" value="6" min="1" max="10" step="1" data-decimal="0">
-                                            </label>
-                                            <label class="btn btn-secondary btn-nrm-2 input_increase"> &gt; </label>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <label for="font" class="h4 neucha">Шрифт
-                                            <input type="hidden" id="font" value="Neucha">
-                                            <div class="btn-group noclose" role="group">
-                                                <button type="button" class="btn btn-nrm-2 btn-block btn-outline-info dropdown-toggle font_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: Roboto; width:200px;">Neucha</button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item change_font segoe" data-value="segoe" href="#">Segoe</a>
-                                                    <a class="dropdown-item change_font neucha" data-value="neucha" href="#">Neucha</a>
-                                                    <a class="dropdown-item change_font roboto" data-value="roboto" href="#">Roboto</a>
-                                                    <a class="dropdown-item change_font jokerman" data-value="jokerman" href="#">Jokerman</a>
-                                                    <a class="dropdown-item change_font showcard" data-value="showcard" href="#">Showcard Gothic</a>
-                                                    <a class="dropdown-item change_font playbill" data-value="playbill" href="#">Playbill</a>
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <!-- modal setings 
-
-                                <div class="col-md-12 settings-left modal--page2">
-                                    <div class="card-body text-center row mt-3">
-                                        <label for="modules" class="col-md-4  h4 neucha">Цифры в формулах</label>
-                                        <div class="col-md-8">
-                                            <div class="btn-group  btn-group-toggle" data-toggle="buttons" style="margin-bottom:3px">
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="1" type="checkbox" checked=""> 1 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="2" type="checkbox" checked=""> 2 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="3" type="checkbox" checked=""> 3 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="4" type="checkbox" checked=""> 4 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="5" type="checkbox" checked=""> 5 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="6" type="checkbox" checked=""> 6 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="7" type="checkbox" checked=""> 7 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="8" type="checkbox" checked=""> 8 </label>
-                                                <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="9" type="checkbox" checked=""> 9 </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body text-center row">
-                                        <label class="col-md-4 h4 neucha" for="topic">Переходы</label>
-                                        <div class="col-md-8 ">
-                                            <select name="" id="topic" class="form-control text-center">
-                                                <option value="0">Выберите</option>
-                                                <option value="simple_mirror">1 - Зеркальные числа (Простой счет)</option>
-                                                <option value="brother_mirror">1.1 - Зеркальные числа (Помощь брата)</option>
-                                                <option value="train_mode_50">5 - Тренировка переходов через 50</option>
-                                                <option value="train_mode_100">6 - Тренировка переходов через 100</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="card-body text-center row">
-                                        <h4 class="neucha col-md-4">Repdigit</h4>
-                                        <div class="btn-group col-md-8 btn--repdigit">
-                                            <button type="button" class="btn btn-nrm-2 btn-outline-warning discharge_mode btn_discharge_mode_mirror" data-value="mirror" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="" > 
-                                                <input type="hidden" name="discharge_mode" value="all">Зер 
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                -->
+                            <div class="card-body text-center row justify-content-center">
+                                <label class="h4 neucha" for="topic">Переходы</label>
+                                <select name="" id="topic" class="form-control text-center">
+                                    <option value="0">Выберите</option>
+                                    <option value="simple_mirror">1 - Зеркальные числа (Простой счет)</option>
+                                    <option value="brother_mirror">1.1 - Зеркальные числа (Помощь брата)</option>
+                                    <option value="simple_brother">2 - Помощь брата, а на старшем разряде - простой счет</option>
+                                    <option value="friend_less_100">3 - Помощь друга - оставаться внутри 100 (без переходов)</option>
+                                    <option value="combo_less_100">4 - Комьинированный счет - оставаться внутри 100 (без переходов)</option>
+                                    <option value="train_mode_50">5 - Тренировка переходов через 50</option>
+                                    <option value="train_mode_100">6 - Тренировка переходов через 100</option>
+                                    <option value="train_sign">7 - Тренировка отрицательных чисел</option>
+                                    <option value="random">8 - Все темы</option>
+                                </select>
                             </div>
+                            <div class="card-body text-center row justify-content-center mt-3">
+                                <blockquote class="card-blockquote col-md-8 align-self-center">
+                                    <label for="modules" class="h4 neucha">Цифры в
+                                        <div class="btn-group mt-2">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-nrm-2 btn-info dropdown-toggle modules_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:190px">Простой счет</button>
+                                                <div class="dropdown-menu dropdown-menu-middle">
+                                                    <input type="hidden" name="modules" value="simple">
+                                                    <a class="dropdown-item modules module_simple_title bg-info" href="#" data-value="simple">Простой счет</a>
+                                                    <a class="dropdown-item modules module_brother_title" href="#" data-value="brother" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Помощь брата</a>
+                                                    <a class="dropdown-item modules module_friend_title" href="#" data-value="friend" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Помощь друга</a>
+                                                    <a class="dropdown-item modules module_friend_brother_title" href="#" data-value="friend,brother_fr" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Помощь друга и брата</a>
+                                                    <a class="dropdown-item modules module_combo_title" href="#" data-value="combo" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Комбинированный счет</a>
+                                                    <a class="dropdown-item modules module_random_title" href="#" data-value="random" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true"  data-original-title="" title="">Произвольный</a>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-nrm-2 btn-outline-info active check_all"><input type="hidden" value="1"> ✔ </button>
+                                        </div>
+                                    </label>
+                                </blockquote>
+                                <div class="col-12 ">
+                                    <div class="btn-group btn-group-toggle btn--modal2" data-toggle="buttons" style="margin-bottom:3px">
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="1" type="checkbox" checked=""> 1 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="2" type="checkbox" checked=""> 2 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="3" type="checkbox" checked=""> 3 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active"><input name="checked_digits" value="4" type="checkbox" checked=""> 4 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="5" type="checkbox" checked=""> 5 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="6" type="checkbox" checked=""> 6 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="7" type="checkbox" checked=""> 7 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="8" type="checkbox" checked=""> 8 </label>
+                                        <label class="btn btn-nrm-2 btn-outline-info checked_digits active "><input name="checked_digits" value="9" type="checkbox" checked=""> 9 </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4 class="neucha">Операции</h4>
+                                <div class="btn-group  ">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-nrm-2 btn-success dropdown-toggle operation_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Слож-е/Выч-е</button>
+                                        <input type="hidden" name="operation" value="plus_minus">
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item operation" data-value="plus" href="#">Сложение</a>
+                                            <a class="dropdown-item operation" data-value="minus" href="#">Вычитание</a>
+                                            <a class="dropdown-item operation bg-success" data-value="plus_minus" href="#">Сложение/Вычитание</a>
+                                            <div class="dropdown-divider just_operation disabled"></div>
+                                            <a class="dropdown-item operation just_operation disabled" data-value="just_plus" href="#">Только сложение</a>
+                                            <a class="dropdown-item operation just_operation disabled" data-value="just_minus" href="#">Только вычитание</a>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-nrm-2 btn-outline-success operation_alternation" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="">
+                                        <input type="hidden" name="operation_alternation" value="off">+/-
+                                    </button>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="decimal_display btn btn-nrm-2 btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Дробь</button>
+                                        <input type="hidden" name="decimal" value="off">
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item decimal text-danger bg-success" data-value="off" href="#">Выключить</a>
+                                            <a class="dropdown-item decimal" data-value="1_digit" href="#">1 знак после запятой</a>
+                                            <a class="dropdown-item decimal" data-value="2_digit" href="#">2 знака после запятой</a>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group " role="group">
+                                        <button type="button" class="btn btn-nrm-2 btn-outline-success sign_display btn_dropdown_sign disabled dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Знак</button>
+                                        <input type="hidden" name="sign" value="off">
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item sign bg-success" data-value="off" href="#">Исключить отрицательные числа</a>
+                                            <a class="dropdown-item sign" data-value="on" href="#">Включить отрицательные числа</a>
+                                            <a class="dropdown-item sign" data-value="training" href="#">Тренировка отрицательных чисел</a>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-nrm-2 btn-outline-success is_alternation" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title=""><input type="hidden" name="is_alternation" value="off">1/2 </button>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4 class="neucha">Дополнительные настройки</h4>
+                                <div class="btn-group  ">
+                                    <div class="btn-group dropup" role="group">
+                                        <button type="button" class="btn btn-nrm-2 btn-outline-warning dropdown-toggle btn_dropdown_50 mode_50_display disabled active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">✓ 50+</button>
+                                        <input type="hidden" name="mode_50" value="on">
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item mode_50 text-danger" data-value="off" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="">Выключить 50+</a>
+                                            <a class="dropdown-item mode_50 bg-warning" data-value="on" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Включить 50+</a>
+                                            <a class="dropdown-item mode_50" href="#" data-value="training" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Тренировка 50+</a>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group dropup" role="group">
+                                        <button type="button" class="btn btn-nrm-2 btn-outline-warning dropdown-toggle btn_dropdown_100 mode_100_display disabled active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">✓ 100+</button>
+                                        <input type="hidden" name="mode_100" value="on">
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item mode_100 text-danger" data-value="off" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="">Выключить 100+</a>
+                                            <a class="dropdown-item mode_100 bg-warning" data-value="on" href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Включить 100+</a>
+                                            <a class="dropdown-item mode_100" href="#" data-value="training" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Тренировка 100+</a>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-nrm-2 btn-outline-warning all_discharge disabled active" data-container="body" data-toggle="popover" data-trigger="hover" data-html="true" data-placement="right" title=""> <input type="hidden" name="all_discharge" value="on">Все </button>
+                                    <button type="button" class="btn btn-nrm-2 btn-outline-warning discharge_mode btn_discharge_mode_mirror" data-value="mirror" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title=""> <input type="hidden" name="discharge_mode" value="all">Зер </button>
+                                    <div class="btn-group dropup noclose" role="group">
+                                        <button type="button" class="btn btn-sm btn-warning dropdown-toggle btn_dropdown_additional" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="additional_display"> Раз </span></button>
+                                        <div class="dropdown-menu min-width-5rem">
+                                            <a class="dropdown-item bg-warning discharge_mode" data-value="all" href="#" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Все разряды</a>
+                                            <a class="dropdown-item discharge_mode" href="#" data-value="1" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >1-й разряд</a>
+                                            <a class="dropdown-item discharge_mode" href="#" data-value="2" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">2-й разряд</a>
+                                            <a class="dropdown-item discharge_mode" href="#" data-value="3" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >3-й разряд</a>
+                                            <a class="dropdown-item discharge_mode" href="#" data-value="4" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">4-й разряд</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="card-body text-center">
+                                <h4 class="neucha">Количество цифр</h4>
+                                <div class="btn-group inc-dec-control">
+                                    <label class="btn btn-nrm-2 btn-success change_value_to_default" data-value_type="digits_nmb" data-value="1">Цифр: </label>
+                                    <label class="btn btn-nrm-2 btn-success input_decrease"> &lt; </label>
+                                    <label class="btn btn-nrm-2 btn-success p-0">
+                                        <input type="number" name="digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="1" min="1" max="12" step="1" data-decimal="0">
+                                    </label>
+                                    <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+                                </div>
+                                <div class="btn-group inc-dec-control">
+                                    <label class="btn btn-nrm-2 btn-success pr-0 change_value_to_default" data-value_type="progress_digits_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Прогресс: </label>
+                                    <label class="btn btn-nrm-2 btn-success input_decrease"> &lt; </label>
+                                    <label class="btn btn-nrm-2 btn-success p-0">
+                                        <input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+                                    </label>
+                                    <label class="btn btn-nrm-2 btn-success input_increase"> &gt; </label>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4 class="neucha">Количество действий</h4>
+                                <div class="btn-group inc-dec-control">
+                                    <label class="btn btn-nrm-2 btn-info change_value_to_default pr-0" data-value_type="actions_nmb" data-value="5">Действий:</label>
+                                    <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
+                                    <label class="btn btn-nrm-2 btn-info p-0">
+                                        <input type="number" name="actions_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="5" min="1" max="300" step="1" data-decimal="0">
+                                    </label>
+                                    <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                                </div>
+                                <div class="btn-group inc-dec-control">
+                                    <label class="btn btn-nrm-2 btn-info pr-0 change_value_to_default" data-value_type="progress_actions_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Прогресс: </label>
+                                    <label class="btn btn-nrm-2 btn-info input_decrease"> &lt; </label>
+                                    <label class="btn btn-nrm-2 btn-info p-0">
+                                        <input type="number" name="progress_actions_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
+                                    </label>
+                                    <label class="btn btn-nrm-2 btn-info input_increase"> &gt; </label>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4 class="neucha">Интервал</h4>
+                                <div class="btn-group-2">
+                                    <div class="btn-group inc-dec-control">
+                                        <label class="btn btn-nrm-2 btn-danger change_value_to_default" data-value_type="interval" data-value="1" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >Интервал: </label>
+                                        <label class="btn btn-nrm-2 btn-danger input_decrease"> &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-danger p-0">
+                                            <input type="number" name="interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="1" min="0.1" max="10" step="0.1" data-decimal="1">
+                                        </label>
+                                        <label class="btn btn-danger btn-nrm-2 input_increase"> &gt; </label>
+                                    </div>
+                                    <div class="btn-group inc-dec-control">
+                                        <label class="btn btn-nrm-2 btn-danger pr-0  change_value_to_default" data-value_type="progress_interval" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >Про: </label>
+                                        <label class="btn btn-nrm-2 btn-danger input_decrease"> &lt; </label>
+                                        <label class="btn btn-nrm-2 btn-danger p-0">
+                                            <input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="0" min="0" max="5" step="1" data-decimal="0">
+                                        </label>
+                                        <label class="btn btn-nrm-2 btn-danger input_increase"> &gt; </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body text-center hidden-xs screens_nmb_card">
+                                <h4 class="neucha ">Количество игроков</h4>
+                                <div class="btn-group inc-dec-control">
+                                    <label class="btn btn-secondary change_value_to_default" data-value_type="screens_nmb" data-value="6">Игроков: </label>
+                                    <label class="btn btn-secondary input_decrease"> &lt; </label>
+                                    <label class="btn btn-secondary" style="padding: 0">
+                                        <input type="number" name="screens_nmb" class="form-control screens_nmb text-center border-secondary bg-light-secondary input_number" value="6" min="1" max="10" step="1" data-decimal="0">
+                                    </label>
+                                    <label class="btn btn-secondary btn-nrm-2 input_increase"> &gt; </label>
+                                </div>
+                            </div>
+<!--                             <div class="card-body">
+                                <label for="font" class="h4 neucha">Шрифт
+                                    <input type="hidden" id="font" value="Neucha">
+                                    <div class="btn-group noclose" role="group">
+                                        <button type="button" class="btn btn-nrm-2 btn-block btn-outline-info dropdown-toggle font_display" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: Roboto; width:200px;">Neucha</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item change_font segoe" data-value="segoe" href="#">Segoe</a>
+                                            <a class="dropdown-item change_font neucha" data-value="neucha" href="#">Neucha</a>
+                                            <a class="dropdown-item change_font roboto" data-value="roboto" href="#">Roboto</a>
+                                            <a class="dropdown-item change_font jokerman" data-value="jokerman" href="#">Jokerman</a>
+                                            <a class="dropdown-item change_font showcard" data-value="showcard" href="#">Showcard Gothic</a>
+                                            <a class="dropdown-item change_font playbill" data-value="playbill" href="#">Playbill</a>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div> -->
+
                         </div>
                         <div class="modal-footer border-info">
-<!--                             <button type="button" class="btn btn-nrm-2 btn-info" data-dismiss="modal">Закрыть</button>
- -->                            <button type="button" class="btn btn-nrm-2 btn-success" data-dismiss="modal" id="save_settings">Применить</button>
+                            <button type="button" class="btn btn-nrm-2 btn-success" data-dismiss="modal" id="save_settings">Применить</button>
                         </div>
                     </div>
                 </form>
@@ -4702,7 +4649,7 @@
         return '<div  class="screen container-fluid card text-center padding-left-right-0 padding-top-bottom-0 4bg_' + screen_parameters.screen_id + ' ' + screen_parameters.screen_class + ' " id="' + screen_parameters.screen_id + '" style="border: 1px dotted grey; background-color:inherit">\
             <input type="hidden" class="block_type" value="main_block"/>\
             <form class="padding-left-right-0" style="margin:0;" >\
-            <div class="bg_color bg_color_' + screen_parameters.screen_id + '" style="height:100vh; width:100%; position:absolute; "></div>\
+            <div class="bg_color bg_color_' + screen_parameters.screen_id + '" style="min-height: 650px; height:100vh; width:100%; position:absolute; "></div>\
             <input type="hidden" class="active_block" value="choice_block">\
             \
             <div class="card-body padding-top-bottom-1vh row justify-content-center align-items-center" style="height: ' + screen_parameters.screen_height + '; padding:0; ">\
@@ -4716,7 +4663,6 @@
             <a href="#" class="btn_stop hidden btn btn-lg btn-nrm btn-danger margin-bottom-5" ><i class="fa fa-stop"> </i>  Стоп</a>\
             <a href="#" class="btn_restart hidden btn btn-lg btn-nrm btn-secondary margin-bottom-5" ><img src="img/btn--again.png" alt="" />  Заново</a>\
             <a href="#" class="btn_show_example show_block hidden btn btn-lg btn-nrm btn-purple margin-bottom-5" data-block_type="problem_show_block"><i class="fa fa-eye"> </i>  Задание</a>\
-            <a href="#" class="btn_show_settings show_block btn btn-lg btn-nrm" data-block_type="settings_block" > <img src="img/btn--setting.png" alt="" />  Настроить</a>\
             </div>\
             <div class="col right_hero right_hero_' + right_hero_index + '" style=" height: ' + screen_parameters.screen_height + ';"></div>\
             </div>\
@@ -4724,7 +4670,7 @@
             style="background-color: inherit; border: none; width:100%; height: ' + screen_parameters.countdown_block_height + '; font-size: ' + screen_parameters.countdown_block_fontsize + '" value="">\
             <div data-block_type="problem_block" class="block col hidden row align-items-center justify-content-center">\
             <input class="text-center col-12 w-100 fonted"  type="text" readonly tabindex="-1" value="" \
-            style="color: black; background-color: inherit; border: none; width:100%; height: ' + screen_parameters.problem_block_height + ' ; font-size: ' + screen_parameters.problem_block_fontsize + ';">\
+            style="color: black; background-color: inherit; border: none; width:100%; max-height: 300px; height: ' + screen_parameters.problem_block_height + ' ; font-size: ' + screen_parameters.problem_block_fontsize + '; ">\
             <div class="row justify-content-center"> \
             <button tabindex="-1" type="button" class="btn_pause show_block btn btn-lg btn-nrm btn-success " data-block_type="main_block"> Пауза <img src="img/btn--pause.png" alt="" /></button> \
             </div>\

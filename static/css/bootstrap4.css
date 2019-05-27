@@ -2457,11 +2457,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+/*  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-}
+*/}
 
 .btn:focus, .btn:hover {
   text-decoration: none;
@@ -2547,7 +2547,7 @@ fieldset[disabled] a.btn {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(85, 85, 85, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(85, 85, 85, 0.5);
 }
-
+/*
 .btn-success {
   color: #fff;
   background-color: #28a745;
@@ -2577,7 +2577,7 @@ fieldset[disabled] a.btn {
   border-color: #1c7430;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
-}
+}*/
 
 .btn-info {
   color: #fff;
@@ -2609,7 +2609,7 @@ fieldset[disabled] a.btn {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
 }
-
+/*
 .btn-warning {
   color: #111;
   background-color: #ffc107;
@@ -2620,7 +2620,7 @@ fieldset[disabled] a.btn {
   color: #111;
   background-color: #e0a800;
   border-color: #d39e00;
-}
+}*/
 
 .btn-warning:focus, .btn-warning.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
@@ -2797,7 +2797,7 @@ fieldset[disabled] a.btn {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(85, 85, 85, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(85, 85, 85, 0.5);
 }
-
+/*
 .btn-outline-success {
   color: #28a745;
   background-color: transparent;
@@ -2828,7 +2828,7 @@ fieldset[disabled] a.btn {
   border-color: #28a745;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
-}
+}*/
 
 .btn-outline-info {
   color: #17a2b8;
