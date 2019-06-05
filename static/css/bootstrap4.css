@@ -2589,6 +2589,7 @@ fieldset[disabled] a.btn {
   color: #fff;
   background-color: #138496;
   border-color: #117a8b;
+  cursor: pointer;
 }
 
 .btn-info:focus, .btn-info.focus {
@@ -2670,6 +2671,10 @@ fieldset[disabled] a.btn {
   border-color: #b21f2d;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.btn--close:hover{
+  cursor:pointer;
 }
 
 .btn-light {
@@ -3015,6 +3020,7 @@ fieldset[disabled] a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
+  padding-top: 0.4rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 555px 25px 15px 25px/25px 5px 35px 555px;
