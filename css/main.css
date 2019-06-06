@@ -2,6 +2,9 @@
 
 body {
     font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+    position: relative;
+    min-width: 480px;
 }
 
 input,
@@ -492,8 +495,8 @@ input::-webkit-inner-spin-button {
     border-radius: 4px;
     border: none;
     position: relative;
-    height: 72px;
     padding: 0;
+    min-width: 120px;
 }
 
 .btn_start span{
@@ -885,6 +888,7 @@ input::-webkit-inner-spin-button {
     border: none !important;
     width: 35px !important;
     height: 35px !important;
+    min-height: 35px !important;
 }
 
 .show .btn--close span {
@@ -1005,9 +1009,9 @@ input::-webkit-inner-spin-button {
     position: relative;
     background-color: #2bc3dc !important;
     border-radius: 8px !important; 
-    font-size: 36px;
-    line-height: 75px;
-    height: 75px;
+    font-size: 4vh;
+    height: 8vh;
+    line-height: 8vh;
     padding: 0 !important;
     border: none !important;
     color: #fff;
@@ -1068,11 +1072,11 @@ input::-webkit-inner-spin-button {
 .btn_pause {
     background-color: #9247c3 !important;
     border: none !important;
-    height: 65px !important;
-    line-height: 65px !important;
+    height: 7vh !important;
+    line-height: 7vh !important;
     padding: 0 50px !important;
     border-radius: 5px !important;
-    font-size: 36px;
+    font-size: 3.5vh;
     color: #fff;
 }
 
@@ -1087,6 +1091,7 @@ input::-webkit-inner-spin-button {
     margin-bottom: 15px;
     color: #9247c3;
     line-height: 1;
+    width: 100%;
 }
 
 .calculation__input {
@@ -1198,6 +1203,135 @@ textarea, textarea.form-control {
 .btn {
     transition: all .0 !important;
 }
+
+
+
+.navbars {
+    background-color: #a745c8 !important;
+    border: none;
+    border-radius: 0;
+    padding: 12px;
+    padding-bottom: 0px;
+    height: auto !important;
+}
+
+.modal-button-top{
+    max-width: 669px;
+    margin: 0.75rem auto;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+
+.btn-info {
+    background: #2bc3dc;
+    border-color: #2bc3dc;
+    height: 7vh;
+    border-right: 5px;
+}
+.btn-info:hover,
+.btn-info:focus {
+    background: #17a2b8;
+    border-color: #17a2b8;
+}
+
+
+.btn-purple {
+    background-color: #f43ddb;
+    height: 7vh;
+    border-right: 5px;
+}
+.btn-purple:hover,
+.btn-purple:focus, {
+    background-color: #e83e8c;
+}
+
+.btn-keyboard-group-lg > .btn-keyboard {
+    font-size: 5vh;
+}
+
+.btn {
+    min-height: 40px;
+    max-height: 75px;
+}
+
+
+.fonted {
+    font-size: 12vw !important;
+}
+
+.padding-top-bottom-1vh .btn_group_main .btn img,
+.padding-top-bottom-1vh .btn_group_main .btn img,
+.btn_show_example img {
+    display: none;
+}
+
+
+.modal-body .btn{
+    background: #fff !important;
+    border-color: #fff !important;
+    color: #41becd !important;
+}
+.modal-body .inc-dec-control {
+    border: 1px solid #e6e6e6; 
+}
+
+
+.modal-body .bg-light-success,
+.modal-body .bg-light-danger {
+    background: #2bc3dc;
+    color: #fff;
+}
+
+.modal-body .modal__button {
+    background-color: #f43ddb !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+}
+
+.modal-body .select__border {
+    border-radius: 5px !important;
+    border: 2px solid #2bc3dc !important; 
+}
+.modal-body .select__btn {
+    border-radius: 5px !important;
+    background: #f43ddb !important;
+    border: 2px solid #f43ddb !important;
+    color: #fff !important;
+    transition: all .6s;
+}
+.modal-body .select__btn:hover,
+.modal-body .select__btn:focus {
+    background: #e83e8c !important;
+    border: 2px solid #e83e8c !important;
+}
+
+
+.modal-body .bg-info {
+    color: #fff;
+    background-color: #2bc3dc !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background: #f43ddb !important;
+}
+
+.modal-body .btn-outline-info {
+    background: #fff !important;
+    border-color: #2bc3dc !important;
+}
+.modal-body .active {
+    background: #41becd !important;
+    border-color: #41becd !important;
+    color: #fff !important;
+}
+.modal-body .focus {
+    background: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+
 /*-------------------------------media-------------------------------------------*/
 @media only screen and (max-width : 1200px) {
     .nav-item .btn {
@@ -1223,9 +1357,6 @@ textarea, textarea.form-control {
         left: 15px;
     }
 
-    .btn_group_main .btn {
-        font-size: 24px;
-    }
 }
 @media only screen and (max-width : 992px) {
     .btn_group_main .btn img {
@@ -1331,11 +1462,7 @@ textarea, textarea.form-control {
     .inc-dec-control .btn {
         margin-bottom: 0;
     }
-/*
-    .show .btn {
-        background: #fff !important;
-        color: #41becd !important;
-    }*/
+
 
     .show .active {
         background: #41becd !important;
@@ -1350,8 +1477,6 @@ textarea, textarea.form-control {
     .form-control {
         font-size: 22px !important;
     }
-
-
 }
 
 @media only screen and (max-width : 767px) {
@@ -1383,18 +1508,8 @@ textarea, textarea.form-control {
     }
 }
 
-.navbars {
-    background-color: #a745c8 !important;
-    border: none;
-    border-radius: 0;
-    padding: 12px;
-    padding-bottom: 0px;
-    height: auto !important;
-}
-
-.modal-button-top{
-    max-width: 669px;
-    margin: 0.75rem auto;
-    margin-bottom: 0;
-    margin-top: 0;
+@media (min-width: 576px) {
+    .modal-dialog {
+        margin: 10px auto;
+    }
 }
