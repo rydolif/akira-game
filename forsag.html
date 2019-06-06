@@ -981,7 +981,7 @@
                                     <label for="modules" class="h4 neucha">Цифры в формулах
                                         <div class="btn-group mt-2">
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-nrm-2 btn-info dropdown-toggle modules_display select__border" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:190px">Прямой счет</button>
+                                                <button type="button" class="btn btn-nrm-2 btn-info dropdown-toggle modules_display select__border" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:210px">Прямой счет</button>
                                                 <div class="dropdown-menu dropdown-menu-middle">
                                                     <input type="hidden" name="modules" value="simple">
                                                     <a class="dropdown-item modules module_simple_title bg-info" href="#" data-value="simple">Прямой счет</a>
@@ -1066,9 +1066,14 @@
                                 </div>
                             </div>
 
-
-                            <a class="dropdown-item btn_voice" href="#">Голос <i class="fa fa-check"></i></a> 
-                            <a class="dropdown-item btn_double_sign_mode" href="#"> Правила знаков <i class="fa fa-check d-none"></i></a>
+                            <p class="modal__line">
+                                <span>Голос</span>
+                                <a class="dropdown-item btn_voice click--button" href="#">ОК</a> 
+                            </p>
+                            <p class="modal__line">
+                                <span>Правила знаков</span>
+                                <a class="dropdown-item btn_double_sign_mode click--button" href="#">ОК</a>
+                            </p>
                             
                             <div class="card-body text-center">
                                 <h3 class="neucha">Автомат</h3>
@@ -1083,14 +1088,36 @@
                                     <label class="btn btn-nrm-2 btn-success input_increase"> + </label>
                                 </div>
 
-                                <div class="btn-group inc-dec-control">
-                                    <label class="btn btn-nrm-2 btn-success pr-0 change_value_to_default" data-value_type="progress_digits_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Знаков: </label>
-                                    <label class="btn btn-nrm-2 btn-success input_decrease"> - </label>
-                                    <label class="btn btn-nrm-2 btn-success p-0">
-                                        <input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
-                                    </label>
-                                    <label class="btn btn-nrm-2 btn-success input_increase"> + </label>
+                                <div class="wigth--flex">
+                                    <div class="btn-group-2 wigth--five">
+                                        <label class="btn btn-nrm-2 btn-success pr-0 change_value_to_default modal__label" data-value_type="progress_digits_nmb" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="">Знаков: </label>
+                                        <div class="btn-group inc-dec-control">
+                                            <label class="btn btn-nrm-2 btn-success input_decrease"> - </label>
+                                            <label class="btn btn-nrm-2 btn-success p-0">
+                                                <input type="number" name="progress_digits_nmb" class="form-control input-nrm-2 text-center border-success bg-light-success input_number" value="0" min="0" max="20" step="1" data-decimal="0">
+                                            </label>
+                                            <label class="btn btn-nrm-2 btn-success input_increase"> + </label>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group-2 wigth--five">
+                                        <div class="btn-group inc-dec-control"  style="display:none;">
+                                            <label class="btn btn-nrm-2 btn-danger input_decrease"> - </label>
+                                            <label class="btn btn-nrm-2 btn-danger p-0">
+                                                <input type="number" name="interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="1" min="0.1" max="10" step="0.1" data-decimal="1">
+                                            </label>
+                                            <label class="btn btn-danger btn-nrm-2 input_increase"> + </label>
+                                        </div>
+                                        <label class="btn btn-nrm-2 btn-danger pr-0  change_value_to_default modal__label" data-value_type="progress_interval" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >Паузы: </label>
+                                        <div class="btn-group inc-dec-control">
+                                            <label class="btn btn-nrm-2 btn-danger input_decrease"> - </label>
+                                            <label class="btn btn-nrm-2 btn-danger p-0">
+                                                <input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="0" min="0" max="5" step="1" data-decimal="0">
+                                            </label>
+                                            <label class="btn btn-nrm-2 btn-danger input_increase"> + </label>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="card-body text-center"  style="display:none;">
                                 <h4 class="neucha">Количество действий</h4>
@@ -1109,26 +1136,6 @@
                                         <input type="number" name="progress_actions_nmb" class="form-control input-nrm-2 text-center border-info bg-light-info input_number" value="0" min="0" max="10" step="1" data-decimal="0">
                                     </label>
                                     <label class="btn btn-nrm-2 btn-info input_increase"> + </label>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                               
-                                <div class="btn-group-2">
-                                    <div class="btn-group inc-dec-control"  style="display:none;">
-                                        <label class="btn btn-nrm-2 btn-danger input_decrease"> - </label>
-                                        <label class="btn btn-nrm-2 btn-danger p-0">
-                                            <input type="number" name="interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="1" min="0.1" max="10" step="0.1" data-decimal="1">
-                                        </label>
-                                        <label class="btn btn-danger btn-nrm-2 input_increase"> + </label>
-                                    </div>
-                                    <div class="btn-group inc-dec-control">
-                                        <label class="btn btn-nrm-2 btn-danger pr-0  change_value_to_default" data-value_type="progress_interval" data-value="0" data-toggle="popover" data-trigger="hover" data-placement="right" data-html="true" title="" >Паузы: </label>
-                                        <label class="btn btn-nrm-2 btn-danger input_decrease"> - </label>
-                                        <label class="btn btn-nrm-2 btn-danger p-0">
-                                            <input type="number" name="progress_interval" class="form-control input-nrm-2 text-center border-danger bg-light-danger input_number" value="0" min="0" max="5" step="1" data-decimal="0">
-                                        </label>
-                                        <label class="btn btn-nrm-2 btn-danger input_increase"> + </label>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -4479,7 +4486,7 @@
             </div>\
             <div class="col right_hero right_hero_' + right_hero_index + '" style=" height: ' + screen_parameters.screen_height + ';"></div>\
             </div>\
-            <input data-block_type="countdown_block" type="text" class="block col hidden text-center " readonly \
+            <input data-block_type="countdown_block" type="text" class="block col hidden text-center color" readonly \
             style="background-color: inherit; border: none; width:100%; height: ' + screen_parameters.countdown_block_height + '; font-size: ' + screen_parameters.countdown_block_fontsize + '" value="">\
             <div data-block_type="problem_block" class="block col hidden row align-items-center justify-content-center">\
             <input class="text-center col-12 w-100 fonted"  type="text" readonly tabindex="-1" value="" \
@@ -4491,14 +4498,14 @@
             <div data-block_type="answer_input_block" class="block col hidden row align-items-center justify-content-center" >\
             <p>Твой ответ</p>\
             <input type="number" class="form-control fonted text-center border-info answer_input" \
-            style="width:90%; height: ' + screen_parameters.answer_input_block_height + '; font-size: ' + screen_parameters.answer_input_block_fontsize + '">\
+            style="width:90%; height: ' + screen_parameters.answer_input_block_height + '; font-size: 24px !important;">\
             <div class="row justify-content-center" style="margin-top:10px"> \
             <button tabindex="-1" type="button" class="show_block btn btn-lg btn-nrm btn-purple" data-block_type="main_block"><i class="fa fa-bars"></i> Меню</button>\
             <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-info btn_check_answer"><i class="fa fa-question"></i> Отправить</button> \
             </div>\
             </div>\
             <div data-block_type="answer_comment_block" class="block col hidden row align-items-center justify-content-center ">\
-            <div class="row col-12 align-items-center justify-content-center" style="width:90%;  height: ' + screen_parameters.answer_comment_block_height + '; font-size:' + screen_parameters.answer_comment_block_fontsize + '"> \
+            <div class="row col-12 align-items-center justify-content-center" style="width:90%;  height: 30vh; font-size:' + screen_parameters.answer_comment_block_fontsize + '"> \
             <span class="col-12 answer_check_text  text-center">  </span>  \
             <div class="col-12 hidden false_answer_image false_answer_image_' + screen_parameters.screen_id + ' " style=" width: 100%; height: ' + screen_parameters.comment_image_height + ';"></div>\
             <span class="answer_comment_text text-center col-12">  </span>  \
@@ -4513,7 +4520,7 @@
             </div>\
             <div data-block_type="problem_show_block" class="block col hidden row align-items-center justify-content-center">\
             <textarea  type="text" class="form-control text-center border-info problem_show" readonly  \
-            style="resize: none; width:100%; height: ' + screen_parameters.problem_show_block_height + '; font-size: ' + screen_parameters.problem_show_block_fontsize + '"></textarea>\
+            style="resize: none; width:100%; height: 30vh; font-size: 5vh;"></textarea>\
             <div class="row justify-content-center">\
             <button tabindex="-1" type="button" class="show_block btn btn-lg btn-nrm btn-purple" data-block_type="main_block"><i class="fa fa-bars"></i> Меню</button>\
             <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-success btn_show_result hidden"><i class="fa fa-thumbs-up"></i> Результат</button> \
