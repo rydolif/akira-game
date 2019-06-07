@@ -700,6 +700,20 @@
                     </div>
                 </li>
 
+                <li class="nav-item dropdown tablet-hidden mobile-hidden show">
+                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Переходы<span class="mode_display"></span> </a>
+                    <div class="dropdown-menu border-warning btn-outline-warning noclose show">
+                        <a class="dropdown-item mode" data-mode_type="mode_50" href="#">
+                            <input type="hidden" value="off">
+                            <span class="activity"></span> <span class="title">через 50</span>
+                        </a>
+                        <a class="dropdown-item mode" data-mode_type="mode_100" href="#">
+                            <input type="hidden" value="off">
+                            <span class="activity"></span> <span class="title">через 100</span>
+                        </a>
+                    </div>
+                </li>
+
                 <li class="nav-pause nav-item dropdown">
                     <a tabindex="-1" href="#" class="btn btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onclick="$('#modal_global_settings').modal()" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-original-title="" title="">Опции</a>
                 </li>
@@ -776,6 +790,20 @@
                         <a class="dropdown-item navbar_interval" href="#" data-value="4">4 сек </a>
                         <a class="dropdown-item navbar_interval" href="#" data-value="4.5">4.5 сек </a>
                         <a class="dropdown-item navbar_interval" href="#" data-value="5">5 сек </a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown tablet-hidden mobile-hidden">
+                    <a tabindex="-1" href="#" class="dropdown-toggle btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Переходы<span class="mode_display"></span> </a>
+                    <div class="dropdown-menu border-warning btn-outline-warning noclose">
+                        <a class="dropdown-item mode" data-mode_type="mode_50" href="#">
+                            <input type="hidden" value="off">
+                            <span class="activity"></span> <span class="title">через 50</span>
+                        </a>
+                        <a class="dropdown-item mode" data-mode_type="mode_100" href="#">
+                            <input type="hidden" value="off">
+                            <span class="activity"></span> <span class="title">через 100</span>
+                        </a>
                     </div>
                 </li>
 
@@ -1323,7 +1351,7 @@
     <input type="hidden" id="trans_countdown_1" value="1">
     <input type="hidden" id="trans_countdown_2" value="2">
     <input type="hidden" id="trans_countdown_3" value="3">
-    <input type="hidden" id="trans_false_answer" value="Ничего страшного! В другой раз получиться!">
+    <input type="hidden" id="trans_false_answer" value="Ничего страшного, в следующий раз получится">
     <script>
         $(document).ready(function () {
                 GLOBAL_STATE.voice = true;
@@ -4511,11 +4539,11 @@
             <span class="answer_comment_text text-center col-12">  </span>  \
             </div>\
             <div class="row"> \
-            <button tabindex="-1" type="button" class="show_block btn btn-lg btn-nrm btn-purple" data-block_type="main_block"><i class="fa fa-bars"></i> Меню</button> \
-            <button tabindex="-1" type="button" class="btn_show_example d-none show_block btn btn-lg btn-nrm btn-purple" data-block_type="problem_show_block"><i class="fa fa-eye"></i> Задание</button> \
+            <button tabindex="-1" type="button" class="show_block btn btn-lg btn-nrm btn-purple" data-block_type="main_block"><i class="fa fa-bars"></i> Настройки</button> \
+            <button tabindex="-1" type="button" class="btn_show_example d-none show_block btn btn-lg btn-nrm btn-purple" data-block_type="problem_show_block"><i class="fa fa-eye"></i> Проверить</button> \
             <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-success btn_show_result hidden"><i class="fa fa-thumbs-up"></i> Результат</button> \
             <button tabindex="-1" type="button" class="btn btn-lg d-none btn-warning text-dark btn-nrm btn-success hidden btn_reexample"><i class="fa fa-refresh"></i></button> \
-            <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-success btn_next"><i class="fa fa-forward"></i> Следующий</button> \
+            <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-success btn_next"><i class="fa fa-forward"></i> Продолжить</button> \
             </div>\
             </div>\
             <div data-block_type="problem_show_block" class="block col hidden row align-items-center justify-content-center">\
@@ -4524,7 +4552,7 @@
             <div class="row justify-content-center">\
             <button tabindex="-1" type="button" class="show_block btn btn-lg btn-nrm btn-purple" data-block_type="main_block"><i class="fa fa-bars"></i> Меню</button>\
             <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-success btn_show_result hidden"><i class="fa fa-thumbs-up"></i> Результат</button> \
-            <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-success btn_next"><i class="fa fa-forward"></i> Следующий</button> \
+            <button tabindex="-1" type="button" class="btn btn-lg btn-nrm btn-success btn_next"><i class="fa fa-forward"></i> Продолжить</button> \
             </div>\
             </div>\
             <div data-block_type="settings_block" class="block col row justify-content-center hidden ' + screen_parameters.settings_block_class + '" >\
@@ -4771,7 +4799,7 @@
                     <div class="col-sm-12 ' + btn_keyboard_group_class + '">\
                     <button tabindex="-1" type="button" class="btn btn-lg btn-success btn-keyboard btn_start btn--calculation">OK</button>\
                     <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard" data-value="0">0</button>\
-                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard btn--calculation" data-value="minus"><i class="fa fa-minus"></i></button>\
+                    <button tabindex="-1" type="button" class="btn btn-secondary btn-keyboard btn--opacity" data-value="minus"></button>\
                     </div>\
                     </div>\
                     <div class="row col-sm-12 justify-content-center">\

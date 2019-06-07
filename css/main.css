@@ -1245,7 +1245,7 @@ textarea, textarea.form-control {
 
 
 .fonted {
-    font-size: 12vw !important;
+    font-size: 8vh !important;
 }
 
 .padding-top-bottom-1vh .btn_group_main .btn img,
@@ -1393,6 +1393,12 @@ textarea, textarea.form-control {
     font-size: 24px !important;
 }
 
+.btn {
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 3px;
+}
+
 .btn i {
     display: none !important;
 }
@@ -1426,6 +1432,13 @@ textarea, textarea.form-control {
     padding-top: 0;
 }
 
+.btn--opacity {
+    opacity: 0;
+}
+
+.card-body {
+    padding-top: 0;
+}
 /*-------------------------------media-------------------------------------------*/
 @media only screen and (max-width : 1200px) {
     .nav-item .btn {
